@@ -1,0 +1,79 @@
+@-webkit-keyframes fade-in-down {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#home * {
+    -webkit-animation: fade-in-down 1.5s;
+    animation: fade-in-down 1.5s;
+}
+
+#home .header{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    width: 75%;
+}
+
+#home .title {
+    font-size: 6vw;
+    font-weight: 100;
+    margin: 10px;
+}
+
+#home .chevron {
+    position: absolute;
+    /*TODO: more rigorous positioning*/
+    right: 17%;
+    bottom: 23%;
+}
+
+#typing-text {
+    height: 30px !important;
+    font-size: 20pt;
+}
+
+#typing-text #content:after {
+    content: '\2759';
+    -webkit-animation: fade 0.5s alternate infinite;
+    animation: fade 0.5s alternate infinite;
+}

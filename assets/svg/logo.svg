@@ -1,0 +1,23 @@
+
+<svg width="205px" height="140px" viewBox="0 0 205 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="O-OVERLAYS" transform="translate(-29.000000, -27.000000)" opacity="0.799365942">
+            <polygon id="Path-6" fill-opacity="0.74889606" fill="#FF4081" style="mix-blend-mode: overlay;" points="29.6551702 97.0298026 49.6047232 47.8759459 97.279092 28.8944843 77.1514406 76.179581"></polygon>
+            <polygon id="Path-6" fill-opacity="0.74889606" fill="#B3E5FC" style="mix-blend-mode: overlay;" transform="translate(47.998140, 96.998140) rotate(135.000000) translate(-47.998140, -96.998140) " points="14.1861787 131.065799 34.1357318 81.9119421 81.8101005 62.9304805 61.6824492 110.215577"></polygon>
+            <polygon id="Path-6" fill-opacity="0.74889606" fill="#B3E5FC" style="mix-blend-mode: overlay;" transform="translate(62.811961, 132.067659) scale(-1, 1) translate(-62.811961, -132.067659) " points="29 166.135318 48.9495531 116.981462 96.6239218 98 76.4962704 145.285097"></polygon>
+            <polygon id="Path-6" fill="#F6511D" style="mix-blend-mode: overlay;" transform="translate(96.998140, 145.998140) rotate(45.000000) translate(-96.998140, -145.998140) " points="63.1861787 180.065799 83.1357318 130.911942 130.810101 111.93048 110.682449 159.215577"></polygon>
+            <polygon id="Path-6" fill="#6A4C93" style="mix-blend-mode: overlay;" transform="translate(130.811961, 130.067659) scale(-1, -1) translate(-130.811961, -130.067659) " points="97 164.135318 116.949553 114.981462 164.623922 96 144.49627 143.285097"></polygon>
+            <polygon id="Path-6" fill="#FFF176" style="mix-blend-mode: overlay;" transform="translate(144.998140, 94.998140) rotate(135.000000) translate(-144.998140, -94.998140) " points="111.186179 129.065799 131.135732 79.9119421 178.810101 60.9304805 158.682449 108.215577"></polygon>
+            <polygon id="Path-6" fill="#51E2CA" style="mix-blend-mode: overlay;" transform="translate(131.811961, 62.067659) scale(-1, 1) translate(-131.811961, -62.067659) " points="98 96.1353183 117.949553 46.9814616 165.623922 28 145.49627 75.2850967"></polygon>
+            <polygon id="Path-6" fill="#03A9F4" style="mix-blend-mode: overlay;" transform="translate(95.536177, 47.998140) rotate(45.000000) translate(-95.536177, -47.998140) " points="62.1861787 82.0657988 81.8631672 32.9119421 128.886176 13.9304805 109.033522 61.2155772"></polygon>
+        </g>
+        <g id="D-OVERLAYS" transform="translate(51.000000, 6.000000)" fill-opacity="0.695652174">
+            <polygon id="Path-4" fill="#FF4081" style="mix-blend-mode: overlay;" transform="translate(64.500000, 64.500000) rotate(45.000000) translate(-64.500000, -64.500000) " points="20 19 109 110 109 55.6560621 72.4418733 19"></polygon>
+            <polygon id="Path-4" fill="#03A9F4" style="mix-blend-mode: overlay;" points="65 1 154 92 154 37.6560621 117.441873 1"></polygon>
+            <polygon id="Path-4" fill="#FFEB3B" style="mix-blend-mode: overlay;" transform="translate(109.500000, 82.500000) scale(1, -1) translate(-109.500000, -82.500000) " points="65 37 154 128 154 73.6560621 117.441873 37"></polygon>
+        </g>
+    </g>
+</svg>

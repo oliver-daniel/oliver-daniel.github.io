@@ -1,0 +1,32 @@
+#about-image {
+    border: 2px solid white;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    margin-right: 50px;
+    max-width: 300px;
+}
+
+#about-me p {
+    padding: 0 20px;
+}
+
+#about-image:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+@media only screen and (max-width: 768px) {
+    #about-me .content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    #about-image {
+        margin: 0;
+    }
+}
