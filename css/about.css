@@ -25,6 +25,7 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        padding-top: 0;
     }
     #about-image {
         margin: 0;

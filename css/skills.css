@@ -21,10 +21,6 @@
     height: 35px;
 }
 
-.skill-icon.active {
-    color: var(--accent);
-}
-
 .skill-icon {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,9 +38,11 @@
     font-size: 14pt;
 }
 
+.skill-icon.active,
 .skill-icon:hover {
     color: var(--accent);
 }
+
 
 .skill-container {
     min-height: 10rem;
@@ -69,5 +67,10 @@
     .skill-icon-container {
         width: 100%;
         margin-left: 0;
+    }
+
+    #skills .window-container,
+    #skills .content{
+        padding-top: 0;
     }
 }

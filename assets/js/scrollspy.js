@@ -1,10 +1,10 @@
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame    ||
-          function(callback){
-            window.setTimeout(callback, 1000 / 60);
-          };
+window.requestAnimFrame = (function () {
+  return window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function (callback) {
+      window.setTimeout(callback, 1000 / 60);
+    };
 })();
 
 
@@ -17,7 +17,7 @@ window.requestAnimFrame = (function(){
 function scrollToY(scrollTargetY, speed, easing) {
 
   var scrollY = window.scrollY || document.documentElement.scrollTop,
-      currentTime = 0;
+    currentTime = 0;
 
   scrollTargetY = scrollTargetY || 0;
   speed = speed || 2000;
@@ -65,19 +65,26 @@ function scrollToY(scrollTargetY, speed, easing) {
  *  @param {object} menu - menu selector
  */
 
+
 function menuControl(menu) {
 
   var scrollPos = window.scrollY || document.documentElement.scrollTop,
-      links     = menu.querySelectorAll('a[href^="#"]');
+    links = menu.querySelectorAll('a[href^="#"]');
 
-  for(var i = 0; i < links.length; i++) {
+  for (var i = 0; i < links.length; i++) {
 
-    var currLink   = links[i],
-        refElement = document.querySelector(currLink.getAttribute('href'));
+    var currLink = links[i],
+      refElement = document.querySelector(currLink.getAttribute('href'));
 
-    if(refElement.offsetTop <= scrollPos && (refElement.offsetTop + refElement.clientHeight) > scrollPos) {
+    if (refElement.offsetTop <= scrollPos &&
+      (refElement.offsetTop + refElement.clientHeight) > scrollPos) {
       currLink.classList.add('active');
-
+      const event = new CustomEvent('scroll-in', {
+        detail: {
+          index: i
+        }
+      });
+      document.dispatchEvent(event);
     } else {
       currLink.classList.remove('active');
     }
@@ -103,7 +110,7 @@ function animated(menu, speed, easing) {
     scrollToY(target.offsetTop, speed, easing);
   }
 
-  for(i = 0; i < links.length; i++) {
+  for (i = 0; i < links.length; i++) {
 
     var link = links[i];
     link.addEventListener('click', control);
@@ -121,7 +128,7 @@ function scrollSpy(menu, speed, easing) {
 
   animated(menu, speed, easing);
 
-  document.addEventListener('scroll', function() {
+  document.addEventListener('scroll', function () {
     menuControl(menu);
   });
 }

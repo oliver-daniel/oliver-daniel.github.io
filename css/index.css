@@ -29,8 +29,9 @@ a {
     color: white;
 }
 
-.accent {
+.accent, .skill-icon a.active {
     color: var(--accent);
+    transition: color 0.2s;
 }
 
 .background {
@@ -62,6 +63,9 @@ img.logo {
     opacity: 0.5;
     -webkit-transition: 0.2s;
     transition: 0.2s;
+    -webkit-filter: drop-shadow(2px 4px 1px black);
+    filter: drop-shadow(2px 4px 1px black);
+    z-index: 1;
 }
 
 img.logo:hover {
@@ -88,6 +92,7 @@ img.logo:hover {
     align-items: center;
     background: var(--primary-bg);
     border-left: 1px solid var(--accent);
+    transition: border-left 0.4s;
 }
 
 #sidebar .icon-container {
@@ -273,6 +278,9 @@ img.logo:hover {
         width: 90%;
     }
     .chevrons {
+        display: none !important;
+    }
+    .button-container{
         display: none !important;
     }
 }

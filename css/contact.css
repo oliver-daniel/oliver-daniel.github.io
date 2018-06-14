@@ -84,12 +84,13 @@
 
 .terminal input[type="submit"]:hover {
     text-shadow: 3px 3px 3px black;
-    color: white;
+    color: var(--accent);
 }
 
 @media only screen and (max-width: 768px) {
     #contact .content {
         flex-direction: column;
+        padding-top: 0;
     }
     .contact-icon-container {
         flex-direction: row;
