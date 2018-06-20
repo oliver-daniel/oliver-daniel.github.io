@@ -107,7 +107,7 @@ img.logo:hover {
     align-items: center;
 }
 
-#sidebar .icon-container svg {
+#sidebar .icon-container a svg {
     height: 30px;
     width: 30px;
     color: white;
@@ -115,7 +115,7 @@ img.logo:hover {
     transition: 0.2s;
 }
 
-#sidebar a.active svg {
+#sidebar .icon-container a.active svg {
     color: var(--accent);
     height: 40px;
     width: 40px;

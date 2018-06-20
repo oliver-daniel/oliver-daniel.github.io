@@ -7,6 +7,7 @@ window.requestAnimFrame = (function () {
     };
 })();
 
+SENSITIVITY = 0.13;
 
 /**
  *  @param {number} scrollTargetY
@@ -76,15 +77,23 @@ function menuControl(menu) {
     var currLink = links[i],
       refElement = document.querySelector(currLink.getAttribute('href'));
 
-    if (refElement.offsetTop <= scrollPos &&
-      (refElement.offsetTop + refElement.clientHeight) > scrollPos) {
-      currLink.classList.add('active');
+    var sensitiveTop = refElement.offsetTop * (1 - SENSITIVITY);
+    var sensitiveBtm = (refElement.offsetTop + refElement.clientHeight) * (1 + SENSITIVITY);
+
+    if (sensitiveTop <= scrollPos &&
+      sensitiveBtm > scrollPos
+    ) {
       const event = new CustomEvent('scroll-in', {
         detail: {
           index: i
         }
       });
       document.dispatchEvent(event);
+    }
+
+    if (refElement.offsetTop <= scrollPos &&
+      (refElement.offsetTop + refElement.clientHeight) > scrollPos) {
+      currLink.classList.add('active');
     } else {
       currLink.classList.remove('active');
     }
