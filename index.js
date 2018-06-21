@@ -9,16 +9,31 @@ const type_delay = 60;
 const blink_delay = 800;
 const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-const COLORS = [
-    'white',
-    'rgb(205, 152, 29)',
-    '#00ADE9',
-    '#F758FF',
-    '#37CB4D'
-];
+const COLORS = ['white', 'rgb(205, 152, 29)', '#00ADE9', '#F758FF', '#37CB4D'];
+
+const ANCHORS = ['#home', '#about-me', '#skills', '#blog', '#contact'];
+
+function setAnchors() {
+    ANCHORS.forEach((id, i) => {
+        let selector = `${id} .chevron a`;
+        let els = document.querySelectorAll(selector);
+        //home
+        if (els.length == 1) {
+            let [down] = els;
+            down.href = ANCHORS[i + 1];
+        } else {
+            let [up,
+                down] = els;
+            up.href = ANCHORS[i > 0
+                    ? i - 1
+                    : ANCHORS.length - 1];
+            down.href = ANCHORS[(i + 1) % ANCHORS.length];
+        }
+    })
+}
 
 async function type(word, posn = 0) {
-    if (posn === word.length + 1)
+    if (posn === word.length + 1) 
         return;
     div.textContent = word.slice(0, posn);
     await timeout(type_delay);
@@ -26,7 +41,7 @@ async function type(word, posn = 0) {
 }
 
 async function erase(word, posn = 0) {
-    if (posn === word.length)
+    if (posn === word.length) 
         return;
     div.textContent = div
         .textContent
@@ -88,18 +103,21 @@ function addListeners() {
     const SCROLL_SPEED = 4000;
     scrollSpy(menu, SCROLL_SPEED, 'easeInOutSine');
 
-   /* for (let chevron of chevrons) {
+    /* for (let chevron of chevrons) {
         scrollSpy(chevron, SCROLL_SPEED, 'easeInOutSine');
     }*/
 
     //color change
-    document.addEventListener('scroll-in', function ({
-        detail: {
+    document.addEventListener('scroll-in', function ({detail: {
             index
-        }
-    }) {
-        var rule = document.all ? 'rules' : 'cssRules'
-        document.styleSheets[0][rule][4].style.setProperty('--accent', COLORS[index]);
+        }}) {
+        var rule = document.all
+            ? 'rules'
+            : 'cssRules'
+        document
+            .styleSheets[0][rule][4]
+            .style
+            .setProperty('--accent', COLORS[index]);
     });
 
     //skill buttons
@@ -108,9 +126,7 @@ function addListeners() {
     for (let icon of icons) {
         icon
             .addEventListener('click', function () {
-                const {
-                    id
-                } = this;
+                const {id} = this;
                 //clear existing and add new
                 const oldIcon = document.getElementById(selection);
 
@@ -138,5 +154,6 @@ function addListeners() {
 
 //document ready
 feather.replace();
+setAnchors();
 addListeners();
 typeAll();

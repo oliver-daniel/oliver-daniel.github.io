@@ -12,6 +12,10 @@
     <meta name="og:image" content="assets/svg/logo.svg">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="assets/svg/logo.svg">
+    <script src="assets/js/feather.min.js"></script>
+    <script async src="assets/js/scrollspy.js"></script>
+    <script async src="assets/js/smooth-scroll.min.js"></script>
+    <script async src="index.js"></script>
     <title>Oliver Daniel</title>
 </head>
 
@@ -55,7 +59,7 @@
             </div>
         </div>
         <div class="chevron">
-            <a href="#about-me">
+            <a>
                 <i data-feather="chevron-down"></i>
             </a>
         </div>
@@ -93,12 +97,12 @@
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
-                        <a href="#home">
+                        <a>
                             <i data-feather="chevron-up"></i>
                         </a>
                     </div>
                     <div class="chevron">
-                        <a href="#skills">
+                        <a>
                             <i data-feather="chevron-down"></i>
                         </a>
                     </div>
@@ -172,12 +176,12 @@
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
-                        <a href="#about-me">
+                        <a>
                             <i data-feather="chevron-up"></i>
                         </a>
                     </div>
                     <div class="chevron">
-                        <a href="#contact">
+                        <a>
                             <i data-feather="chevron-down"></i>
                         </a>
                     </div>
@@ -186,6 +190,7 @@
         </div>
     </div>
     <div class="page" id="blog">
+        <link rel="stylesheet" href="css/blog.css">
         <div class="window shadowed">
             <div class="window-header">
                 <div class="button-container">
@@ -198,6 +203,36 @@
                     <span class="title-text">Blog</span>
                 </div>
                 <div class="button-container pseudo"></div>
+            </div>
+            <div class="window-container">
+                <div class="content">
+                    <div class="post-preview">
+                        <div class="preview-img empty"></div>
+                        <div class="preview-desc empty"></div>
+                    </div>
+                    <div class="post-preview">
+                        <div class="preview-img empty"></div>
+                        <div class="preview-desc empty"></div>
+                    </div>
+                    <div class="post-preview">
+                        <div class="preview-img empty"></div>
+                        <div class="preview-desc empty"></div>
+                    </div>
+                    <!--TODO: link to blog page-->
+                    <a id="see-more" href="#blog">Click here to see more...</a>
+                </div>
+                <div class="chevrons">
+                    <div class="chevron">
+                        <a>
+                            <i data-feather="chevron-up"></i>
+                        </a>
+                    </div>
+                    <div class="chevron">
+                        <a>
+                            <i data-feather="chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -260,12 +295,12 @@
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
-                        <a href="#skills">
+                        <a>
                             <i data-feather="chevron-up"></i>
                         </a>
                     </div>
                     <div class="chevron">
-                        <a href="#home">
+                        <a>
                             <i data-feather="chevron-down"></i>
                         </a>
                     </div>
@@ -274,9 +309,5 @@
         </div>
     </div>
 </body>
-<script src="assets/js/feather.min.js"></script>
-<script async src="assets/js/scrollspy.js"></script>
-<script async src="assets/js/smooth-scroll.min.js"></script>
-<script async src="index.js"></script>
 
 </html>
