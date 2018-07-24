@@ -23,17 +23,18 @@ function setAnchors() {
             down.href = ANCHORS[i + 1];
         } else {
             let [up,
-                down] = els;
-            up.href = ANCHORS[i > 0
-                    ? i - 1
-                    : ANCHORS.length - 1];
+                down
+            ] = els;
+            up.href = ANCHORS[i > 0 ?
+                i - 1 :
+                ANCHORS.length - 1];
             down.href = ANCHORS[(i + 1) % ANCHORS.length];
         }
     })
 }
 
 async function type(word, posn = 0) {
-    if (posn === word.length + 1) 
+    if (posn === word.length + 1)
         return;
     div.textContent = word.slice(0, posn);
     await timeout(type_delay);
@@ -41,7 +42,7 @@ async function type(word, posn = 0) {
 }
 
 async function erase(word, posn = 0) {
-    if (posn === word.length) 
+    if (posn === word.length)
         return;
     div.textContent = div
         .textContent
@@ -108,16 +109,22 @@ function addListeners() {
     }*/
 
     //color change
-    document.addEventListener('scroll-in', function ({detail: {
+    document.addEventListener('scroll-in', function ({
+        detail: {
             index
-        }}) {
-        var rule = document.all
-            ? 'rules'
-            : 'cssRules'
-        document
-            .styleSheets[0][rule][4]
-            .style
-            .setProperty('--accent', COLORS[index]);
+        }
+    }) {
+        var rule = document.all ?
+            'rules' :
+            'cssRules'
+        try {
+            document
+                .styleSheets[0][rule][4]
+                .style
+                .setProperty('--accent', COLORS[index]);
+        } catch (DOMException) {
+
+        }
     });
 
     //skill buttons
@@ -126,7 +133,9 @@ function addListeners() {
     for (let icon of icons) {
         icon
             .addEventListener('click', function () {
-                const {id} = this;
+                const {
+                    id
+                } = this;
                 //clear existing and add new
                 const oldIcon = document.getElementById(selection);
 
@@ -152,8 +161,61 @@ function addListeners() {
     }
 }
 
+function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
+    function truncate(str, len) {
+        if (str.length < len) {
+            return str;
+        }
+        let ret = "";
+        const tokens = str.replace(/[\n]/g, ' ').split(' ');
+        for (let i = 0; ret.length <= len - 3; i++) {
+            ret += tokens[i] + " ";
+        }
+        return ret.trim() + "...";
+    }
+    
+    const postPreview = (title, blurb, image, url, date) => `
+    <a href="${url}" target="_blank">
+    <div class="post-preview shadowed">
+        <div class="preview-img ${!image && "empty"}">
+            ${image ? `<img src="${image}" alt=""/>` 
+            :'<i data-feather="file-text"></i>'}
+        </div>
+        <div class="preview-desc">
+            <span class="title">${title}</span><br/>
+            <span class="blurb">${blurb}</span>
+            <div class="preview-date">
+                Posted on ${date}
+            </div>
+        </div>
+    </div>
+    </a>`
+
+
+    for (const {
+            'regular-body': postBody,
+            'regular-title': postTitle,
+            'date-gmt': postDate,
+            //TODO: proper image reading
+            tumblelog: {
+                avatar_url_96: image
+            },
+            url
+        } of tumblr_api_read.posts) {
+        const date = postDate.split(' ')[0];
+        const title = truncate(postTitle || `<i>Post on ${date}</i>`, MAX_TITLE_LENGTH);
+        const blurb = truncate(postBody, MAX_BLURB_LENGTH);
+
+        let el = document.querySelector('#blog .content .previews');
+        let node = postPreview(title, blurb, image, url, date);
+
+        el.insertAdjacentHTML('beforeend', node);
+    }
+}
+
 //document ready
-feather.replace();
 setAnchors();
 addListeners();
+populateBlog(40, 40);
+feather.replace();
 typeAll();

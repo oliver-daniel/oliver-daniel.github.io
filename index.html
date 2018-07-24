@@ -15,7 +15,6 @@
     <script src="assets/js/feather.min.js"></script>
     <script async src="assets/js/scrollspy.js"></script>
     <script async src="assets/js/smooth-scroll.min.js"></script>
-    <script async src="index.js"></script>
     <title>Oliver Daniel</title>
 </head>
 
@@ -208,20 +207,15 @@
             </div>
             <div class="window-container">
                 <div class="content">
-                    <div class="post-preview">
-                        <div class="preview-img empty"></div>
-                        <div class="preview-desc empty"></div>
+                    <h2>Latest posts from my
+                        <a href="https://interblag.tumblr.com" target="_blank">personal blog</a>
+                    </h2>
+                    <div class="previews">
+                        <!-- Autofilled by JS -->
                     </div>
-                    <div class="post-preview">
-                        <div class="preview-img empty"></div>
-                        <div class="preview-desc empty"></div>
+                    <div id="see-more">
+                        <a href="#blog">Click here to see more...</a>
                     </div>
-                    <div class="post-preview">
-                        <div class="preview-img empty"></div>
-                        <div class="preview-desc empty"></div>
-                    </div>
-                    <!--TODO: link to blog page-->
-                    <a id="see-more" href="#blog">Click here to see more...</a>
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
@@ -291,7 +285,9 @@
                                 message:
                                 <textarea name="message" rows="10"></textarea>
                             </p>
-                            <input type="submit" value="Submit">
+                            <div id="submit-btn">
+                                <input type="submit" value="Submit">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -311,5 +307,7 @@
         </div>
     </div>
 </body>
+<script type="text/javascript" src="https://interblag.tumblr.com/api/read/json?type=text&num=3&filter=text"></script>
+<script async src="index.js"></script>
 
 </html>
