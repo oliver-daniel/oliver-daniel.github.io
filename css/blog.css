@@ -32,7 +32,8 @@
 .preview-img {
     margin-right: 25px;
     /* TODO: broken height stuffz */
-    /* display: flex; */
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -78,11 +79,6 @@
     }
     .post-preview {
         flex-direction: column;
-    }
-    .preview-img {
-        margin-right: 0;
-        margin-bottom: 10px;
-        height: auto;
     }
     .preview-desc {
         flex: 1;
