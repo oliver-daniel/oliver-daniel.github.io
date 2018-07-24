@@ -41,6 +41,10 @@ a#see-more:hover {
 }
 
 @media only screen and (max-width: 668px) {
+    #blog .content {
+        margin-left: -5%;
+        height: 95%;
+    }
     .post-preview {
         flex-direction: column;
     }
