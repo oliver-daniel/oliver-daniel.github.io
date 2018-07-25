@@ -9,7 +9,7 @@ const type_delay = 60;
 const blink_delay = 800;
 const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-const COLORS = ['white', 'rgb(205, 152, 29)', '#00ADE9', '#F758FF', '#37CB4D'];
+const COLORS = ['white', '#CD981D', '#00ADE9', '#37CB4D', '#F758FF'];
 
 const ANCHORS = ['#home', '#about-me', '#skills', '#blog', '#contact'];
 
@@ -162,6 +162,8 @@ function addListeners() {
 }
 
 function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
+    if (!tumblr_api_read) return;
+
     function truncate(str, len) {
         if (str.length < len) {
             return str;
@@ -173,7 +175,7 @@ function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
         }
         return ret.trim() + "...";
     }
-    
+
     const postPreview = (title, blurb, image, url, date) => `
     <a href="${url}" target="_blank">
     <div class="post-preview shadowed">
@@ -191,6 +193,8 @@ function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
     </div>
     </a>`
 
+    let el = document.querySelector('#blog .content .previews');
+    el.children[0].remove();
 
     for (const {
             'regular-body': postBody,
@@ -206,7 +210,7 @@ function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
         const title = truncate(postTitle || `<i>Post on ${date}</i>`, MAX_TITLE_LENGTH);
         const blurb = truncate(postBody, MAX_BLURB_LENGTH);
 
-        let el = document.querySelector('#blog .content .previews');
+
         let node = postPreview(title, blurb, image, url, date);
 
         el.insertAdjacentHTML('beforeend', node);

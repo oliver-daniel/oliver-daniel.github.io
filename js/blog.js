@@ -9,14 +9,15 @@ function truncate(str, len) {
     }
     return ret.trim() + "...";
 }
-const postCard = (title, blurb, date, url) =>
-    `
+const postCard = (title, blurb, date, url) => `
 <div class="col-sm-12 col-md-4 col-lg-3">
     <a href="${url}" target="_blank">
         <div class="card fluid shadowed">
             ${title ? `
                 <div class="section">
-                ${title}
+                <h4>
+                    ${title}
+                </h4>
             </div>
             `:""}
             <div class="section">
@@ -32,14 +33,16 @@ const postCard = (title, blurb, date, url) =>
 `;
 
 const el = document.getElementById('posts');
-
-for (const {
-        'regular-body': postBody,
-        'regular-title': title,
-        'date-gmt': postDate,
-        url
-    } of tumblr_api_read.posts) {
-    const blurb = truncate(postBody, 120);
-    const date = postDate.split(' ')[0];
-    el.insertAdjacentHTML('beforeend', postCard(title, blurb, date, url));
+if (tumblr_api_read) {
+    el.children[0].remove();
+    for (const {
+            'regular-body': postBody,
+            'regular-title': title,
+            'date-gmt': postDate,
+            url
+        } of tumblr_api_read.posts) {
+        const blurb = truncate(postBody, 120);
+        const date = postDate.split(' ')[0];
+        el.insertAdjacentHTML('beforeend', postCard(title, blurb, date, url));
+    }
 }
