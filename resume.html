@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/mini-dark.min.css">
     <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <title>Oliver Daniel – Resume</title>
 </head>
 
@@ -96,6 +97,61 @@
                 </div>
                 <div id="skills">
                     <h1>Skills</h1>
+                    <h2>Technologies</h2>
+                    <div id="technologies">
+                        <div class="row">
+                            <h3>Languages:</h3>
+                            <span class="tooltip" aria-label="Python">
+                                <i class="devicon-python-plain"></i>
+                            </span>
+                            <span class="tooltip" aria-label="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span class="tooltip" aria-label="Java">
+                                <i class="devicon-java-plain"></i>
+                            </span>
+                            <span class="tooltip" aria-label="C">
+                                <i class="devicon-c-plain"></i>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <h3>Databases:</h3>
+                            <span class="tooltip" aria-label="MySQL">
+                                <i class="devicon-mysql-plain"></i>
+                            </span>
+                            <span class="tooltip" aria-label="PostgreSQL">
+                                <i class="devicon-postgresql-plain"></i>
+                            </span>
+                            <span>
+                                + Firebase
+                            </span>
+                        </div>
+                        <div class="row">
+                            <h3>Frameworks:</h3>
+                            <span class="tooltip" aria-label="Django">
+                                <i class="devicon-django-plain"></i>
+                            </span>
+                            <span class="tooltip" aria-label="Express">
+                                <i class="devicon-express-original"></i>
+                            </span>
+                            <span>
+                                + Flask
+                            </span>
+                        </div>
+                        <div class="row">
+                            <h3>Web:</h3>
+                            <span class="tooltip" aria-label="HTML">
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span class="tooltip" aria-label="CSS">
+                                <i class="devicon-css3-plain"></i>
+                            </span>
+                            <span class="tooltip" aria-label="React">
+                                <i class="devicon-react-plain"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <hr>
                     <h2>Languages</h2>
                     <div id="languages">
                         <div class="row">
@@ -105,7 +161,7 @@
                             <div class="col-sm-12 col-md-5">
                                 <progress value="1000" max="1000"></progress>
                             </div>
-                            <div class="col-sm-12 col-md-2">
+                            <div class="col-sm-12 col-md">
                                 <span>(native fluent)</span>
                             </div>
                         </div>
@@ -116,7 +172,7 @@
                             <div class="col-sm-12 col-md-5">
                                 <progress value="800" max="1000"></progress>
                             </div>
-                            <div class="col-sm-12 col-md-2">
+                            <div class="col-sm-12 col-md">
                                 <span>(proficient)</span>
                             </div>
                         </div>
@@ -127,7 +183,7 @@
                             <div class="col-sm-12 col-md-5">
                                 <progress value="667" max="1000"></progress>
                             </div>
-                            <div class="col-sm-12 col-md-2">
+                            <div class="col-sm-12 col-md">
                                 <span>(conversational)</span>
                             </div>
                         </div>
@@ -138,7 +194,7 @@
                             <div class="col-sm-12 col-md-5">
                                 <progress value="400" max="1000"></progress>
                             </div>
-                            <div class="col-sm-12 col-md-2">
+                            <div class="col-sm-12 col-md">
                                 <span>(limited)</span>
                             </div>
                         </div>
@@ -163,7 +219,7 @@
     </div>
     <footer>
         &copy; Oliver Daniel 2018. Icons courtesy of
-        <a href="https://feathericons.com ">Feather</a>. Temporary CSS courtesy of
+        <a href="https://feathericons.com ">Feather</a> and <a href="https://vorillaz.github.io/devicons/">Devicons</a>. Temporary CSS courtesy of
         <a href="https://minicss.org ">mini.css</a>.
     </footer>
 </body>
@@ -174,6 +230,12 @@
     scrollSpy(menu);
 
     feather.replace();
+
+    document.querySelectorAll('#technologies span.tooltip').forEach(parent => {
+        let node = parent.children[0];
+        parent.addEventListener('mouseenter', () => node.classList.add('colored'));
+        parent.addEventListener('mouseleave', () => node.classList.remove('colored'));
+    });
 </script>
 
 </html>

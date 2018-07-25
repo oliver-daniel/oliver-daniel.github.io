@@ -107,6 +107,26 @@ a.button:not(:first-of-type) {
     background: #23c9ff;
 } */
 
+#technologies span{
+    display: flex;
+    align-items: center;
+}
+
+#technologies [class^="devicon-"]{
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.2s;
+}
+
+.tooltip:not(.bottom):before{
+    border-top-color: black;
+}
+
+.tooltip:not(.bottom):after{
+    background: black;
+    color:white;
+}
+
 @media only screen and (max-width: 767px) {
     .fixed {
         position: sticky;
