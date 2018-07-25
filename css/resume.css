@@ -79,16 +79,23 @@ a.button:not(:first-of-type) {
     text-align: right;
 }
 
+#languages progress,
 #languages progress::-webkit-progress-bar {
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
-#languages progress:nth-of-type(1)::-webkit-progress-value {
-    background-color: #23c9ff;
+#languages progress::-webkit-progress-value {
+    background: #23c9ff;
 }
 
-#languages progress:nth-of-type(2)::-webkit-progress-value {
+#languages progress::-moz-progress-bar {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    background: #23c9ff;
+}
+
+/* #languages progress:nth-of-type(2)::-webkit-progress-value {
     background: #ca054d;
 }
 
@@ -98,9 +105,9 @@ a.button:not(:first-of-type) {
 
 #languages progress:nth-of-type(4)::-webkit-progress-value {
     background: #23c9ff;
-}
+} */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .fixed {
         position: sticky;
         height: initial;
