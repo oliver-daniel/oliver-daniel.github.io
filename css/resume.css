@@ -139,7 +139,7 @@ a.button:not(:first-of-type) {
     align-items: center;
 }
 
-#technologies .row>div{
+#technologies .row>div {
     display: flex;
 }
 
@@ -185,11 +185,13 @@ a.button:not(:first-of-type) {
     #languages [class^="col-"]:nth-child(1) {
         text-align: left;
     }
+    #languages [class^=col-]:nth-child(3) {
+        text-align: right;
+    }
     .career-img {
         margin-left: -15px;
     }
-
-    #technologies .row>div{
+    #technologies .row>div {
         width: 100%;
     }
 }
