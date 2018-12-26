@@ -218,7 +218,7 @@ function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
 }
 
 //document ready
-setAnchors();
+// setAnchors();
 addListeners();
 populateBlog(40, 40);
 feather.replace();

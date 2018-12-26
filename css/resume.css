@@ -25,12 +25,17 @@ a.button:not(:first-of-type) {
     width: 175px;
     height: 175px;
     background-size: 100%;
-    border: 4px solid white;
-    transition: transform 0.5s ease;
 }
 
-#sidebar .image:hover{
+.image:hover {
     transform: translateY(-5px);
+}
+
+.image {
+    border-radius: 100%;
+    border: 4px solid white;
+    transition: transform 0.5s ease;
+
 }
 
 #menu {
@@ -88,27 +93,24 @@ a.button:not(:first-of-type) {
     margin-top: 1rem;
 }
 
-.career-img {
-    border-radius: 100%;
-    border: 4px solid white;
+.career-icon {
+    display: flex;
+    align-items: center;
+}
+
+.career.image {
     width: 75px;
     height: 75px;
     padding: 5px;
-    filter: grayscale(100%);
-    transition: filter 0.2s;
 }
 
-.career-img:hover {
-    filter: grayscale(0%);
-}
-
-.career-img.iboost {
+.career.image.iboost {
     background: url('../assets/img/experience/iboost.png') 50% 50%;
     background-size: 200%;
 }
 
-.career-img.tyn {
-    background: url('../assets/img/tyn.png');
+.career.image.tyn {
+    background: url('../assets/img/experience/tyn.png');
     background-position: 50% 37%;
     background-size: 235%;
 }
@@ -158,6 +160,7 @@ a.button:not(:first-of-type) {
     font-size: 2rem;
     margin: 0 15px;
     transition: color 0.2s;
+    z-index: -1;
 }
 
 .tooltip:not(.bottom):before {
@@ -177,31 +180,39 @@ a.button:not(:first-of-type) {
         border-bottom: 1px solid white;
         flex-direction: row;
     }
+
     #sidebar {
         flex-direction: column;
     }
+
     #sidebar .image,
     #sidebar h2,
     #bottom-panel {
         display: none;
         /* for now */
     }
+
     #center-panel {
         width: 100%;
     }
+
     #menu {
         flex-direction: row;
         justify-content: space-around;
     }
+
     #languages [class^="col-"]:nth-child(1) {
         text-align: left;
     }
+
     #languages [class^=col-]:nth-child(3) {
         text-align: right;
     }
-    .career-img {
+
+    .career.image {
         margin-left: -15px;
     }
+
     #technologies .row>div {
         width: 100%;
     }
