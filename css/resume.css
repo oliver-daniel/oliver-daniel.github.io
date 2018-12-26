@@ -115,6 +115,11 @@ a.button:not(:first-of-type) {
     background-size: 235%;
 }
 
+.career.image.diller{
+    background: url('../assets/img/experience/diller.png') 10% 50%;
+    background-size: 200%;
+}
+
 #languages [class^="col-"]:nth-child(1) {
     text-align: right;
 }
@@ -209,9 +214,6 @@ a.button:not(:first-of-type) {
         text-align: right;
     }
 
-    .career.image {
-        margin-left: -15px;
-    }
 
     #technologies .row>div {
         width: 100%;
