@@ -34,6 +34,20 @@ a {
     transition: color 0.2s;
 }
 
+@keyframes blink{
+    from{
+        color: inherit;
+    }
+    to{
+        color: var(--accent);
+    }
+}
+
+
+.skill-icon.blink{
+    animation: blink 0.5s ease alternate infinite;
+}
+
 .background {
     background: -webkit-gradient(linear, left top, right top, from(var(--primary-bg)), color-stop(1%, transparent)) center, -webkit-gradient(linear, left top, left bottom, from(var(--primary-bg)), color-stop(1%, transparent)) center, var(--pixel-color);
     background: linear-gradient(90deg, var(--primary-bg) calc(var(--pixel-width) - var(--pixel-size)), transparent 1%) center, linear-gradient(var(--primary-bg) calc(var(--pixel-width) - var(--pixel-size)), transparent 1%) center, var(--pixel-color);

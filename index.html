@@ -9,9 +9,9 @@
     <meta name="og:description" content="Oliver Daniel – Developer">
     <meta name="og:title" content="Oliver Daniel">
     <meta name="og:type" content="website">
-    <meta name="og:image" content="assets/svg/logo.svg">
+    <meta name="og:image" content="favicon.ico">
     <link async rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="assets/svg/logo.svg">
+    <link rel="icon" href="favicon.ico">
     <title>Oliver Daniel</title>
 </head>
 
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="chevron">
-            <a>
+            <a href="#about-me">
                 <i data-feather="chevron-down"></i>
             </a>
         </div>
@@ -77,30 +77,33 @@
             </div>
             <div class="window-container">
                 <div class="content">
-                    <img id="about-image" class="shadowed" src="https://lh3.googleusercontent.com/ThLGVoeArs6ZWlqUOvqzVQlQw1AVrMfAIyhCw_DFB8QCZnajSjOxzZpgtdP4XARYMC3dG58XSqHp-8qvfzFx41ISxOiYgCviLWdV6WJYLFU-58IzU0edakT9txOiL6j4Sjp7QFiM-OMNf0DywyOGn3d64ECfnUfvGu4dww8rSG5lUwrGG0E04LiG1G_axs0V0n9i9Lvcm_rogKMP1fN6iyUogZLl7lbSWjY4U7IZVus_vWO57RCN5xMZEgtL6F1L_t0D92rlfQ7xUfNAEIV6F_TCriHn9tssQ4TojvdOunR9xVTBeRGsZdP8SiGsgG3wEPZD3R-JM-MB77W1SMhM7ncjuV4VNyHuT8Xz_O9IEtXx7SUUExxvJ7EhMBfs84FXCoNdFsQVLPu3n_RQ25vlEpcBxkA6IGNoMepOJS8UW3py9h1lixeZg-zdtSmBuuf15LFkaHhyLoAXlWsDz-gC07Md5diiMRhjv5eFN2MISHXX49qSn67jpBThBfp1E8XffA9egPmGJ-5EaGCINuUGcMoQDFCWV0rJ9PXs7ISmYXjTVW7ixXYPjyVYN8ufxRZ0=w1440-h804"
-                        alt="" title="Courtesy of Hayden Salter">
+                    <img id="about-image" class="shadowed" src="assets/img/about-image.jpg" alt="" title="Courtesy of Hayden Salter">
                     <div>
                         <h1>Hello world!</h1>
                         My name is
                         <span class="accent">Oliver Daniel</span>.
-                        <br> I'm a student in
-                        <span class="accent">Toronto, Ontario</span>. I started programming in 2014 and it’s quickly become my life passion.
+                        <br> I'm a university student in
+                        <span class="accent">Toronto, Ontario</span>. I started programming in 2014 and it’s quickly
+                        become my life passion.
                         <br>
-                        <br> I built this website to showcase my projects and skills. If you like what you see, don't hesitate
+                        <br> I built this website to showcase my projects and skills. If you like what you see, don't
+                        hesitate
                         to
-                        <a href="#contact" class="accent">get in touch</a>. I would love to jumpstart my career with you!
+                        <a href="resume.html" class="accent">check out my résumé</a> or
+                        <a href="#contact" class="accent">get in touch</a>. I would love to jumpstart my career with
+                        you!
                         <br>
                         <br> Enjoy!
                     </div>
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
-                        <a>
+                        <a href="#home">
                             <i data-feather="chevron-up"></i>
                         </a>
                     </div>
                     <div class="chevron">
-                        <a>
+                        <a href="#skills">
                             <i data-feather="chevron-down"></i>
                         </a>
                     </div>
@@ -131,7 +134,7 @@
                             <i data-feather="layers"></i>
                             Backend
                         </div>
-                        <div class="skill-icon" id="programming-icon">
+                        <div class="skill-icon blink" id="programming-icon">
                             <i data-feather="terminal"></i>
                             Programming
                         </div>
@@ -174,12 +177,12 @@
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
-                        <a>
+                        <a href="#about-me">
                             <i data-feather="chevron-up"></i>
                         </a>
                     </div>
                     <div class="chevron">
-                        <a>
+                        <a href="#blog">
                             <i data-feather="chevron-down"></i>
                         </a>
                     </div>
@@ -205,24 +208,21 @@
             <div class="window-container">
                 <div class="content">
                     <h2>Latest posts from my
-                        <a href="https://interblag.tumblr.com" target="_blank">personal blog</a>
+                        <a href="blog.html" target="_blank">personal blog</a>
                     </h2>
                     <div class="previews">
                         <!-- Autofilled by JS -->
                         <i>Looks like there's nothing here.</i>
                     </div>
-                    <div id="see-more">
-                        <a href="blog.html">Click here to see more...</a>
-                    </div>
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
-                        <a>
+                        <a href="#skills">
                             <i data-feather="chevron-up"></i>
                         </a>
                     </div>
                     <div class="chevron">
-                        <a>
+                        <a href="#contact">
                             <i data-feather="chevron-down"></i>
                         </a>
                     </div>
@@ -278,15 +278,15 @@
                         <form action="https://formspree.io/oliver@danielnet.ca" method="POST">
                             <p>
                                 name:
-                                <input name="name" type="text">
+                                <input name="name" type="text" required>
                             </p>
                             <p>
                                 email:
-                                <input name="_replyto" type="email">
+                                <input name="_replyto" type="email" required>
                             </p>
                             <p>
                                 message:
-                                <textarea name="message" rows="10"></textarea>
+                                <textarea name="message" rows="10" required></textarea>
                             </p>
                             <div id="submit-btn">
                                 <input type="submit" value="Submit">
@@ -296,12 +296,12 @@
                 </div>
                 <div class="chevrons">
                     <div class="chevron">
-                        <a>
+                        <a href="#blog">
                             <i data-feather="chevron-up"></i>
                         </a>
                     </div>
                     <div class="chevron">
-                        <a>
+                        <a href="#home">
                             <i data-feather="chevron-down"></i>
                         </a>
                     </div>
