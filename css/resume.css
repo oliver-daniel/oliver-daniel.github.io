@@ -93,6 +93,10 @@ a.button:not(:first-of-type) {
     margin-top: 1rem;
 }
 
+#experience>.row>[class^='col-']:nth-of-type(3){
+    padding-top: 2pc;
+}
+
 .career-icon {
     display: flex;
     align-items: center;
@@ -219,5 +223,8 @@ a.button:not(:first-of-type) {
 
     #technologies .row>div {
         width: 100%;
+    }
+    #experience>.row>[class^='col-']:nth-of-type(3){
+        padding-top: 0;
     }
 }
