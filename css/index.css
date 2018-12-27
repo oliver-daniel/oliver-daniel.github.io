@@ -31,7 +31,17 @@ a {
 
 .accent, .skill-icon a.active {
     color: var(--accent);
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
+}
+
+@-webkit-keyframes blink{
+    from{
+        color: inherit;
+    }
+    to{
+        color: var(--accent);
+    }
 }
 
 @keyframes blink{
@@ -45,7 +55,8 @@ a {
 
 
 .skill-icon.blink{
-    animation: blink 0.5s ease alternate infinite;
+    -webkit-animation: blink 0.5s ease alternate infinite;
+            animation: blink 0.5s ease alternate infinite;
 }
 
 .background {
@@ -106,6 +117,7 @@ img.logo:hover {
     align-items: center;
     background: var(--primary-bg);
     border-left: 1px solid var(--accent);
+    -webkit-transition: border-left 0.4s;
     transition: border-left 0.4s;
 }
 
