@@ -114,16 +114,10 @@ function addListeners() {
             index
         }
     }) {
-        var rule = document.all ?
-            'rules' :
-            'cssRules'
         try {
-            document
-                .styleSheets[0][rule][4]
-                .style
-                .setProperty('--accent', COLORS[index]);
-        } catch (DOMException) {
-
+            document.body.style.setProperty('--accent', COLORS[index]);
+        } catch (err) {
+            console.log(err)
         }
     });
 
@@ -138,6 +132,8 @@ function addListeners() {
                 } = this;
                 //clear existing and add new
                 const oldIcon = document.getElementById(selection);
+
+                icons[1].classList.remove('blink');
 
                 oldIcon
                     .classList

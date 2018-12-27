@@ -77,18 +77,21 @@
             </div>
             <div class="window-container">
                 <div class="content">
-                    <img id="about-image" class="shadowed" src="assets/img/about-image.jpg"
-                        alt="" title="Courtesy of Hayden Salter">
+                    <img id="about-image" class="shadowed" src="assets/img/about-image.jpg" alt="" title="Courtesy of Hayden Salter">
                     <div>
                         <h1>Hello world!</h1>
                         My name is
                         <span class="accent">Oliver Daniel</span>.
                         <br> I'm a university student in
-                        <span class="accent">Toronto, Ontario</span>. I started programming in 2014 and it’s quickly become my life passion.
+                        <span class="accent">Toronto, Ontario</span>. I started programming in 2014 and it’s quickly
+                        become my life passion.
                         <br>
-                        <br> I built this website to showcase my projects and skills. If you like what you see, don't hesitate
+                        <br> I built this website to showcase my projects and skills. If you like what you see, don't
+                        hesitate
                         to
-                        <a href="#contact" class="accent">get in touch</a>. I would love to jumpstart my career with you!
+                        <a href="resume.html" class="accent">check out my résumé</a> or
+                        <a href="#contact" class="accent">get in touch</a>. I would love to jumpstart my career with
+                        you!
                         <br>
                         <br> Enjoy!
                     </div>
@@ -131,7 +134,7 @@
                             <i data-feather="layers"></i>
                             Backend
                         </div>
-                        <div class="skill-icon" id="programming-icon">
+                        <div class="skill-icon blink" id="programming-icon">
                             <i data-feather="terminal"></i>
                             Programming
                         </div>
@@ -205,14 +208,11 @@
             <div class="window-container">
                 <div class="content">
                     <h2>Latest posts from my
-                        <a href="https://interblag.tumblr.com" target="_blank">personal blog</a>
+                        <a href="blog.html" target="_blank">personal blog</a>
                     </h2>
                     <div class="previews">
                         <!-- Autofilled by JS -->
                         <i>Looks like there's nothing here.</i>
-                    </div>
-                    <div id="see-more">
-                        <a href="blog.html">Click here to see more...</a>
                     </div>
                 </div>
                 <div class="chevrons">
@@ -278,15 +278,15 @@
                         <form action="https://formspree.io/oliver@danielnet.ca" method="POST">
                             <p>
                                 name:
-                                <input name="name" type="text">
+                                <input name="name" type="text" required>
                             </p>
                             <p>
                                 email:
-                                <input name="_replyto" type="email">
+                                <input name="_replyto" type="email" required>
                             </p>
                             <p>
                                 message:
-                                <textarea name="message" rows="10"></textarea>
+                                <textarea name="message" rows="10" required></textarea>
                             </p>
                             <div id="submit-btn">
                                 <input type="submit" value="Submit">

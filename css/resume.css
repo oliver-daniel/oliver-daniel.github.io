@@ -96,6 +96,7 @@ a.button:not(:first-of-type) {
 .career-icon {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .career.image {
@@ -117,7 +118,8 @@ a.button:not(:first-of-type) {
 
 .career.image.diller{
     background: url('../assets/img/experience/diller.png') 10% 50%;
-    background-size: 200%;
+    background-size: 201%; 
+    /* don't ask me why */
 }
 
 #languages [class^="col-"]:nth-child(1) {
