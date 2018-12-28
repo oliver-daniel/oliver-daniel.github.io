@@ -174,7 +174,7 @@ function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
 
     const postPreview = (title, blurb, image, url, date) => `
     <a href="${url}" target="_blank">
-    <div class="post-preview shadowed">
+    <div class="post-preview">
         <div class="preview-img ${!image && "empty"}">
             ${image ? `<img src="${image}" alt=""/>` 
             :'<i data-feather="file-text"></i>'}
