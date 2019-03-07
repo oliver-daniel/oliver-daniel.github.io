@@ -47,7 +47,7 @@
     animation: fade-in-down 1.5s;
 }
 
-#home .header{
+#home .header {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 100;
@@ -76,4 +76,10 @@
     content: '\2759';
     -webkit-animation: fade 0.5s alternate infinite;
     animation: fade 0.5s alternate infinite;
+}
+
+@media only screen and (max-width:460px) {
+    #typing-text {
+        height: 75px !important;
+    }
 }

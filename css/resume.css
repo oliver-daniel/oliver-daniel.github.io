@@ -1,0 +1,230 @@
+.container {
+    height: 100%;
+    padding-left: 0;
+    position: relative;
+}
+
+a.button:not(:first-of-type) {
+    top: -10px;
+}
+
+.fixed {
+    position: sticky;
+    left: 0;
+    top: 56px;
+    height: calc(100vh - 56px);
+    border-right: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sidebar .image {
+    background: url("../assets/img/resume-img.jpg") 50% 20% no-repeat;
+    width: 175px;
+    height: 175px;
+    background-size: 100%;
+}
+
+.image:hover {
+    transform: translateY(-5px);
+}
+
+.image {
+    border-radius: 100%;
+    border: 4px solid white;
+    transition: transform 0.5s ease;
+
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--back-color);
+}
+
+#menu a {
+    text-decoration: none;
+    color: gray;
+    transition: color 0.2s;
+}
+
+#menu a.active,
+#menu a:hover {
+    color: white;
+}
+
+#content>div {
+    /* TODO: remove */
+    min-height: 20vh;
+    padding: 2.5%;
+    border-right: 1px solid white;
+}
+
+#content>div:not(:last-of-type) {
+    border-bottom: 1px solid white;
+}
+
+#bottom-panel {
+    width: 100%;
+}
+
+#bottom-panel a.button {
+    margin-bottom: 25px;
+}
+
+#contact {
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact svg {
+    color: white;
+}
+
+#sidebar:before {
+    content: '';
+}
+
+#experience>.row~.row {
+    margin-top: 1rem;
+}
+
+#experience>.row>[class^='col-']:nth-of-type(3){
+    padding-top: 2pc;
+}
+
+.career-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.career.image {
+    width: 75px;
+    height: 75px;
+    padding: 5px;
+}
+
+.career.image.iboost {
+    background: url('../assets/img/experience/iboost.png') 50% 50%;
+    background-size: 200%;
+}
+
+.career.image.tyn {
+    background: url('../assets/img/experience/tyn.png');
+    background-position: 50% 37%;
+    background-size: 235%;
+}
+
+.career.image.diller{
+    background: url('../assets/img/experience/diller.png') 10% 50%;
+    background-size: 201%; 
+    /* don't ask me why */
+}
+
+#languages [class^="col-"]:nth-child(1) {
+    text-align: right;
+}
+
+#languages progress,
+#languages progress::-webkit-progress-bar {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+#languages progress::-webkit-progress-value {
+    background: #23c9ff;
+}
+
+#languages progress::-moz-progress-bar {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    background: #23c9ff;
+}
+
+/* #languages progress:nth-of-type(2)::-webkit-progress-value {
+    background: #ca054d;
+}
+
+#languages progress:nth-of-type(3)::-webkit-progress-value {
+    background: #a4d4b4;
+}
+
+#languages progress:nth-of-type(4)::-webkit-progress-value {
+    background: #23c9ff;
+} */
+
+#technologies span {
+    display: flex;
+    align-items: center;
+}
+
+#technologies .row>div {
+    display: flex;
+}
+
+#technologies [class^="devicon-"] {
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.2s;
+    z-index: -1;
+}
+
+.tooltip:not(.bottom):before {
+    border-top-color: black;
+}
+
+.tooltip:not(.bottom):after {
+    background: black;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .fixed {
+        position: sticky;
+        height: initial;
+        border-right: none;
+        border-bottom: 1px solid white;
+        flex-direction: row;
+    }
+
+    #sidebar {
+        flex-direction: column;
+    }
+
+    #sidebar .image,
+    #sidebar h2,
+    #bottom-panel {
+        display: none;
+        /* for now */
+    }
+
+    #center-panel {
+        width: 100%;
+    }
+
+    #menu {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #languages [class^="col-"]:nth-child(1) {
+        text-align: left;
+    }
+
+    #languages [class^=col-]:nth-child(3) {
+        text-align: right;
+    }
+
+
+    #technologies .row>div {
+        width: 100%;
+    }
+    #experience>.row>[class^='col-']:nth-of-type(3){
+        padding-top: 0;
+    }
+}
