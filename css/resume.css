@@ -101,6 +101,21 @@ a.button:not(:first-of-type) {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.career-icon a::before{
+    content: '';
+    position: absolute;
+    left: 48%;
+    top: 50%;
+    height: 115%;
+    border-right: 4px solid white;
+    z-index: -1;
+}
+
+#experience>.row:last-of-type .career-icon a::before{
+    border: none;
 }
 
 .career.image {
@@ -117,13 +132,23 @@ a.button:not(:first-of-type) {
 .career.image.tyn {
     background: url('../assets/img/experience/tyn.png');
     background-position: 50% 37%;
-    background-size: 235%;
+    background-size: 250%;
 }
 
 .career.image.diller{
     background: url('../assets/img/experience/diller.png') 10% 50%;
-    background-size: 201%; 
+    background-size: 215%; 
     /* don't ask me why */
+}
+
+.career.image.jouncer{
+    background: url('../assets/img/experience/jouncer_logo.png') 50% 50%;
+    background-size: cover;
+}
+
+.career.image.uoft{
+    background: url('../assets/img/experience/uoft-logo.png') 50% 50%;
+    background-size: 100%;
 }
 
 #languages [class^="col-"]:nth-child(1) {

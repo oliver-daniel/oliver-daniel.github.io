@@ -29,5 +29,6 @@
     }
     #about-image {
         margin: 0;
+        height: auto;
     }
 }
