@@ -96,6 +96,10 @@ a.button:not(:first-of-type) {
 #experience>.row>[class^='col-']:nth-of-type(3){
     padding-top: 2pc;
 }
+#experience>.row>[class^='col-']:nth-of-type(3)>p{
+    margin: 0;
+}
+
 
 .career-icon {
     display: flex;
@@ -206,6 +210,10 @@ a.button:not(:first-of-type) {
 .tooltip:not(.bottom):after {
     background: black;
     color: white;
+}
+
+#awards ol li{
+    font-size: .75em;
 }
 
 @media only screen and (max-width: 767px) {
