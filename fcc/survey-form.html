@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-nord.min.css">
+    <link rel="stylesheet" href="assets/css/survey-form.css">
+    <script async src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <title>A Quick Survey</title>
+</head>
+
+<body>
+    <div align="center">
+        <h1 id="title">A Quick Survey</h1>
+        <p id="description">Just answer some questions to help us out.</p>
+        <form action="" id="survey-form">
+            <fieldset class="center">
+                <div>
+                    <label id="name-label" for="name">Name:</label>
+                    <input required type="text" id="name" placeholder="Enter name here..." />
+                </div>
+                <div>
+                    <label id="email-label" for="email">Email:</label>
+                    <input required validate type="email" id="email" placeholder="Enter email here..." />
+                </div>
+                <div>
+                    <label id="number-label" for="number">Number of wives:</label>
+                    <input type="number" placeholder="0+"" id="number" min="0" max="99999">
+                </div>
+                <div>
+                    <label for="dropdown">Country:</label>
+                    <select id="dropdown">
+                        <option value="Canada">Canada</option>
+                        <option value="Traitor">TRAITOR!</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="language">Programming language:</label>
+                    <div class="radio">
+                        <div>
+                            <label for="Python">Python</label>
+                            <input type="radio" name="language" value="Python">
+                        </div>
+                        <div>
+                            <label for="Java">Java</label>
+                            <input type="radio" name="language" value="Java">
+                        </div>
+                        <div>
+                            <label for="JavaScript">JavaScript</label>
+                            <input type="radio" name="language" value="JavaScript">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="radio">
+                        <label for="L">L</label>
+                        <input type="checkbox" value="L" id="">
+                        <label for="G">G</label>
+                        <input type="checkbox" value="G" id="">
+                        <label for="B">B</label>
+                        <input type="checkbox" value="B" id="">
+                        <label for="T">T</label>
+                        <input type="checkbox" value="T" id="">
+                    </div>
+                </div>
+                <div>
+                    <textarea name="final-comments" placeholder="Final comments?" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button type="reset">Reset</button>
+                    <button id="submit" type="submit">Submit</button></div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

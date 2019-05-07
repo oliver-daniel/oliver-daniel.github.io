@@ -1,0 +1,7 @@
+.center{
+    align-items: center;
+}
+
+fieldset>div{
+    width: 50%;
+}

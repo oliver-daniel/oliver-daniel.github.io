@@ -4,6 +4,14 @@
     position: relative;
 }
 
+a,
+a:visited,
+footer a,
+footer a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
 a.button:not(:first-of-type) {
     top: -10px;
 }
@@ -93,10 +101,11 @@ a.button:not(:first-of-type) {
     margin-top: 1rem;
 }
 
-#experience>.row>[class^='col-']:nth-of-type(3){
+#experience>.row>[class^='col-']:nth-of-type(3) {
     padding-top: 2pc;
 }
-#experience>.row>[class^='col-']:nth-of-type(3)>p{
+
+#experience>.row>[class^='col-']:nth-of-type(3)>p {
     margin: 0;
 }
 
@@ -108,7 +117,7 @@ a.button:not(:first-of-type) {
     position: relative;
 }
 
-.career-icon a::before{
+.career-icon a::before {
     content: '';
     position: absolute;
     left: 48%;
@@ -118,7 +127,7 @@ a.button:not(:first-of-type) {
     z-index: -1;
 }
 
-#experience>.row:last-of-type .career-icon a::before{
+#experience>.row:last-of-type .career-icon a::before {
     border: none;
 }
 
@@ -139,18 +148,18 @@ a.button:not(:first-of-type) {
     background-size: 250%;
 }
 
-.career.image.diller{
+.career.image.diller {
     background: url('../assets/img/experience/diller.png') 10% 50%;
-    background-size: 215%; 
+    background-size: 215%;
     /* don't ask me why */
 }
 
-.career.image.jouncer{
+.career.image.jouncer {
     background: url('../assets/img/experience/jouncer_logo.png') 50% 50%;
     background-size: cover;
 }
 
-.career.image.uoft{
+.career.image.uoft {
     background: url('../assets/img/experience/uoft-logo.png') 50% 50%;
     background-size: 100%;
 }
@@ -212,7 +221,7 @@ a.button:not(:first-of-type) {
     color: white;
 }
 
-#awards ol li{
+#awards ol li {
     font-size: .75em;
 }
 
@@ -257,7 +266,8 @@ a.button:not(:first-of-type) {
     #technologies .row>div {
         width: 100%;
     }
-    #experience>.row>[class^='col-']:nth-of-type(3){
+
+    #experience>.row>[class^='col-']:nth-of-type(3) {
         padding-top: 0;
     }
 }
