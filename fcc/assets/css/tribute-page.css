@@ -1,0 +1,33 @@
+body, footer{
+    background:#FFD976;
+    color: black;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#title{
+    margin-top: 24pt;
+}
+
+#img-div{
+    width: 50vw;
+    height: auto;
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+}
+
+#content {
+    box-sizing: border-box;
+    padding: 4em;
+    width: 50vw;
+}
