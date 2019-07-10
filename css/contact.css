@@ -57,7 +57,8 @@
 }
 
 .terminal p:before {
-    content: '>>>';
+    content: '❯❯❯';
+    font-size: 10pt;
     color: var(--accent);
 }
 

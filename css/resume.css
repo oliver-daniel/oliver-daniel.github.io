@@ -270,4 +270,7 @@ a.button:not(:first-of-type) {
     #experience>.row>[class^='col-']:nth-of-type(3) {
         padding-top: 0;
     }
+    .career-icon a::before {
+        border: none;
+    }
 }

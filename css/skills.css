@@ -60,7 +60,8 @@
 }
 
 .skill span.accent:before {
-    content: '>>> '
+    content: '❯❯❯ ';
+    font-size: 12pt;
 }
 
 @media only screen and (max-width: 668px) {
