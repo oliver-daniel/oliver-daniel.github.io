@@ -8,7 +8,7 @@ a,
 a:visited,
 footer a,
 footer a:visited {
-    color: white;
+    color: white !important;
     text-decoration: underline;
 }
 
@@ -29,7 +29,8 @@ a.button:not(:first-of-type) {
 }
 
 #sidebar .image {
-    background: url("../assets/img/resume-img.jpg") 50% 20% no-repeat;
+    background: url("../assets/img/new-about-image.png") 50% 20% no-repeat;
+    background-color: darkgray;
     width: 175px;
     height: 175px;
     background-size: 100%;
@@ -77,9 +78,12 @@ a.button:not(:first-of-type) {
 
 #bottom-panel {
     width: 100%;
+    position: relative;
 }
 
-#bottom-panel a.button {
+#pdf-button a{
+    display: table;
+    margin: 0 auto;
     margin-bottom: 25px;
 }
 
@@ -132,7 +136,7 @@ a.button:not(:first-of-type) {
 }
 
 .career.image {
-    width: 75px;
+    min-width: 75px;
     height: 75px;
     padding: 5px;
 }

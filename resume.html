@@ -42,9 +42,11 @@
                     </div>
                 </div>
                 <div id="bottom-panel">
-                    <a target="_blank" class="button shadowed"
-                        href="https://docs.google.com/document/d/e/2PACX-1vQouW29pLoE_Xj-euTg5hLzQegT5c4j67QI8-5Y14ax5xAZjM7oiywXmcSOdObzh3vsr2CLDOK92Yf3/pub">PDF
-                        version</a>
+                    <div id="pdf-button">
+                        <a target="_blank" class="button shadowed"
+                            href="https://drive.google.com/file/d/1dqH6gE0fWZWf9x8ijJ7uiTlGOldjUerz/preview">PDF
+                            version</a>
+                    </div>
                     <div id="contact">
                         <a target="_blank" href="mailto:oliver@danielnet.ca">
                             <i data-feather="at-sign"></i>
@@ -65,7 +67,7 @@
                 <div id="about">
                     <h1>About Me</h1>
                     <p>
-                        I'm a developer with five years of learning experience, both inside and outside the classroom.
+                        I'm a Toronto-based developer with six years of experience, both inside and outside the classroom.
                         I'm dedicated to using my skills to make my community, city, and world a better place through
                         innovation and communication.
                     </p>
@@ -88,8 +90,8 @@
                                     <i>Bachelor's Degree (Honours)</i>
                                 </small>
                             </h3>
-                            <p>
-                                Double Major, Computer Science &amp; Linguistics
+                            <p>Computer Science &amp; Linguistics <br/>
+                                <a href="http://technologyleadershipinitiative.com/">Technology Leadership Initiative</a> (TLI)
                             </p>
                         </div>
                         <div class="col-sm-12 col-md-3 col-md-offset-3">
@@ -263,186 +265,162 @@
                 </div>
                 <div id="experience">
                     <h1>Employment &amp; Leadership Experience</h1>
-                    <div class="row">
-                        <div class="col-sm-8 col-md-6 col-lg-5">
-                            <h3>University of Toronto
-                                <small>
-                                    <i>Campus Tour Guide, May 2019 – Present</i>
-                                </small>
-                            </h3>
-                            <p>I introduce prospective students, their families, and other guests to the UofT St. George
-                                campus through guided tours.
-                                This job requires interacting with guests from all over the world, and customizing their
-                                experience to show them all that UofT has to offer.
-                            </p>
-                        </div>
-                        <div class="col-sm-2 double-padded career-icon">
-                            <a href="https://www.utoronto.ca/">
-                                <div class="career image uoft"></div>
-                            </a>
-                        </div>
+                    <script>
+                    document.write([
+    {
+        organization: "University of Toronto",
+        href: "https://www.utoronto.ca/",
+        image: "uoft-logo.png",
+        position: "Campus Tour Guide",
+        duration: "May 2019 – Present",
+        main_text: "I introduce prospective students, their families, and other guests to the UofT St. George campus through guided tours.\nThis job requires interacting with guests from all over the world, and customizing their experience to show them all that UofT has to offer.",
+        extra_info: "",
+        extra_styles:{},
+    },
+    {
+        organization: "Tudu",
+        href: "http://www.whatstudu.com/",
+        image: "tudu.svg",
+        position: "Developer",
+        duration: "August 2019",
+        main_text: "TODO. Ha, get it?",
+        extra_info: "",
+        extra_styles:{},
+    },
+    {
+        organization: "Jouncer",
+        href: "https://www.jouncer.com/",
+        image: "jouncer_logo.png",
+        position: "Developer",
+        duration: "August 2018 – March 2019",
+        main_text: "Jouncer is a platform for creators to discover, create, and share the best teams for their most ambitious projects. I was part of the core team of five who developed Jouncer, from the first lines of code to its beta-testing phase.",
+        extra_info: "Although my role primarily revolved around front-end development in React, I also had a heavy hand in the shaping of the Django backend and the API, especially regarding authentication.",
+        extra_styles:{},
+    },
+    {
+        organization: "iBoost Zone",
+        href: "https://www.iboostzone.com/",
+        image: "iboost.png",
+        position: "Intern",
+        duration: "August 2017",
+        main_text: "I did research on the history of technology startups, then wrote & published articles with my findings. I also produced videos for the iBoost YouTube channel using interview footage of famous startup founders.",
+        extra_info: "",
+        extra_styles:{
+            "background-size": "200%"
+        },
+    },
+    {
+        organization: "Toronto Youth Network",
+        href: "https://torontoyouthnetwork.com/",
+        image: "tyn.png",
+        position: "Executive*",
+        duration: "April 2017 – April 2019",
+        main_text: "As part of the charter executive board, I helped grow TYN into a community of more than eight hundred teens. I coordinated and hosted events, assisted with community outreach, and established partnerships with corporations and youth-run organizations across Toronto.",
+        extra_info: "* Positions included Partnership Coordinator, Web Developer, Head of Public Relations, and Co-Chair at varying times.",
+        extra_styles:{
+            "background-size": "250%"
+        },
+    },
+    {
+        organization: "Diller Teen Fellows",
+        href: "https://dillerteenfellows.org/en/",
+        image: "diller.png",
+        position: "Fellow",
+        duration: "August August 2015 – December 2016",
+        main_text: "Diller is an international community of more than 1700 teens, half of whom live in Israel, focused on leadership training, pluralist education, and global volunteerism.\nDuring my fellowship, I helped to organize several group retreats for the Toronto cohort (and our sister cohort from Eilat), and spearheaded a day-long conference for Fellows from the international community in Israel.",
+        extra_info: "The Helen Diller Foundation also offers grants for community initiatives, which with a team of my peers and I used to plan a music therapy event for families with young children in 2017.",
+        extra_styles:{},
+    },
+    
+].map(({
+    organization,
+    href,
+    image,
+    position,
+    duration,
+    main_text,
+    extra_info,
+    extra_styles,
+}, i) => `
+<div class="row">
+    <div class="col-sm-8 col-md-6 col-lg-5">
+        <h3>${organization}
+            <small>
+                <i>${position}, ${duration}</i>
+            </small>
+        </h3>
+        <p>${main_text}</p>
+    </div>
+    <div class="col-sm-2 double-padded career-icon">
+        <a href="${href}">
+            <div class="career image" style="background: var(--back-color) url('assets/img/experience/${image}') 50% 50%/contain no-repeat; ${Object.entries(extra_styles).map(([key, val]) => `${key}: ${val}`).join(";")}"></div>
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2 col-lg-offset-2">
+        <p>${extra_info}</p>
+    </div>
+</div>
+`).join("\n"));
+                    </script>
+            </div>
+            <div id="interests">
+                <h1>Interests</h1>
+                <p>
+                    Whenever I'm not programming or studying, you can probably find me on stage. I've been
+                    performing for most of my life: singing,
+                    acting, dancing, or all three at once in musical theatre. In recent years, my passion for
+                    theatre
+                    has been a driving force for me, and I've begun to take it much more seriously.
+                </p>
+                <p>
+                    Aside from theatrical performance, I love music — both listening to it and creating it. I sing
+                    many genres, along with playing
+                    guitar and ukulele.
+                </p>
+                <p>
+                    I'm also an avid skier, reader, and learner.
+                </p>
+            </div>
+            <div id="awards">
+                <h1>Awards and Accomplishments</h1>
+                <div class="row">
+                    <div class="col-sm-12 col-md">
+                        <h2>Hackathons</h2>
+                        <ul id="hackathons">
+                            <!--TODO: make these look cool lol-->
+                            <li>Hack the North 2017, 2018 – Participant</li>
+                            <li>Cipher Bonfire 2017 – Participant</li>
+                            <li>NxtHacks 2017 – Second Place</li>
+                            <li>DataHacks 2016 – First Place</li>
+                            <li>T.Hacks 2016 – Mentor &amp; Teacher</li>
+                        </ul>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-8 col-md-6 col-lg-5">
-                            <h3>Jouncer
-                                <small>
-                                    <i>Developer, August 2018 – March 2019</i>
-                                </small>
-                            </h3>
-                            <p>Jouncer is a platform for creators to discover, create, and share the best teams for
-                                their most ambitious projects.
-                                I was part of the core team of five who developed Jouncer, from the first lines of code
-                                to its beta-testing phase.
-                            </p>
-                        </div>
-                        <div class="col-sm-2 double-padded career-icon">
-                            <a href="https://jouncer.io">
-                                <div class="career image jouncer"></div>
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2 col-lg-offset-2">
-                            <p>
-                                Although my role primarily revolved around front-end development in React, I also had a
-                                heavy hand
-                                in the shaping of the Django backend and the API, especially regarding authentication.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8 col-md-6 col-lg-5">
-                            <h3>iBoost Zone
-                                <small>
-                                    <i>Intern, August 2017</i>
-                                </small>
-                            </h3>
-                            <p>
-                                I did research on the history of technology startups, then wrote &amp; published
-                                articles with my findings. I also produced
-                                videos for the iBoost YouTube channel using interview footage of famous startup
-                                founders.
-                            </p>
-                        </div>
-                        <div class="col-sm-2 double-padded career-icon">
-                            <a target="_blank" href="https://www.iboostzone.com/">
-                                <div class="career image iboost"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8 col-md-6 col-lg-5">
-                            <h3>Toronto Youth Network
-                                <small>
-                                    <i>Executive*, April 2017 – April 2019</i>
-                                </small>
-                            </h3>
-                            <p>
-                                As part of the charter executive board, I helped grow TYN into a community of more than
-                                eight hundred teens. I coordinated
-                                and hosted events, assisted with community outreach, and established partnerships with
-                                corporations
-                                and youth-run organizations across Toronto.
-                            </p>
-                        </div>
-                        <div class="col-sm-2 double-padded career-icon">
-                            <a target="_blank" href="https://torontoyouthnetwork.com">
-                                <div class="career image tyn"></div>
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2 col-lg-offset-2">
-                            <p>
-                                * April 2017 – November 2017:
-                                <i>Partnership Coordinator &amp; Web Developer</i>
-                                <br> November 2017 – April 2018:
-                                <i>Head of Public Relations</i>
-                                <br> April 2018 – April 2019:
-                                <i>Co-Chair</i>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8 col-md-6 col-lg-5">
-                            <h3>Diller Teen Fellows
-                                <small>
-                                    <i>Fellow, August 2015 – December 2016</i>
-                                </small>
-                            </h3>
-                            <p>
-                                Diller is an international community of more than 1700 teens, half of whom live in
-                                Israel, focused on leadership training, pluralist education, and global volunteerism.
-                                During my fellowship, I helped to organize several group retreats for the Toronto
-                                cohort (and our sister cohort from Eilat), and spearheaded a day-long conference for
-                                Fellows from the international community in Israel.
-                            </p>
-                        </div>
-                        <div class="col-sm-2 double-padded career-icon">
-                            <a target="_blank" href="https://dillerteenfellows.org/en/">
-                                <div class="career image diller"></div>
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
-                            <p>The Helen Diller Foundation also offers grants for community initiatives, which I (along
-                                with a team of my peers) used to plan a music therapy event for families with young
-                                children in 2017.</p>
-                        </div>
+                    <div class="col-sm-12 col-md">
+                        <h2>Academic</h2>
+                        <ul id="academic">
+                            <li>Innis College Exceptional Achievement Award, 2019</li>
+                            <li>Liberal Arts Alumni Award<sup>[1]</sup>, 2018</li>
+                            <li>School Medal<sup>[2]</sup>, 2018</li>
+                            <li>Dean's List<sup>[3]</sup> (8x), 2014–'18</li>
+                        </ul>
                     </div>
                 </div>
-                <div id="interests">
-                    <h1>Interests</h1>
-                    <p>
-                        Whenever I'm not programming or studying, you can probably find me on stage. I've been
-                        performing for most of my life: singing,
-                        acting, dancing, or all three at once in musical theatre. In recent years, my passion for
-                        theatre
-                        has been a driving force for me, and I've begun to take it much more seriously.
-                    </p>
-                    <p>
-                        Aside from theatrical performance, I love music — both listening to it and creating it. I sing
-                        many genres, along with playing
-                        guitar and ukulele.
-                    </p>
-                    <p>
-                        I'm also an avid skier, reader, and learner.
-                    </p>
+                <div class="row">
+                    <ol>
+                        <li>Awarded to a graduating student who has made an outstanding contribution to the liberal
+                            arts, has achieved an excellent academic standing and has been recognized by staff and
+                            students for his/her accomplishments beyond the classroom in the liberal arts.</li>
+                        <li>Presented by the staff to the student who has attained highest standing in at least six
+                            12 U/M credits in a wide range of academic disciplines.</li>
+                        <li>Awarded for attaining an average of at least 80% in a given semester.</li>
+                    </ol>
                 </div>
-                <div id="awards">
-                    <h1>Awards and Accomplishments</h1>
-                    <div class="row">
-                        <div class="col-sm-12 col-md">
-                            <h2>Hackathons</h2>
-                            <ul id="hackathons">
-                                <!--TODO: make these look cool lol-->
-                                <li>Hack the North 2017, 2018 – Participant</li>
-                                <li>Cipher Bonfire 2017 – Participant</li>
-                                <li>NxtHacks 2017 – Second Place</li>
-                                <li>DataHacks 2016 – First Place</li>
-                                <li>T.Hacks 2016 – Mentor &amp; Teacher</li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-12 col-md">
-                            <h2>Academic</h2>
-                            <ul id="academic">
-                                <li>Liberal Arts Alumni Award<sup>[1]</sup>, 2018</li>
-                                <li>School Medal<sup>[2]</sup>, 2018</li>
-                                <li>Dean's List<sup>[3]</sup> (8x), 2014–'18</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <ol>
-                            <li>Awarded to a graduating student who has made an outstanding contribution to the liberal
-                                arts, has achieved an excellent academic standing and has been recognized by staff and
-                                students for his/her accomplishments beyond the classroom in the liberal arts.</li>
-                            <li>Presented by the staff to the student who has attained highest standing in at least six
-                                12 U/M credits in a wide range of academic disciplines.</li>
-                            <li>Awarded for attaining an average of at least 80% in a given semester.</li>
-                        </ol>
-                    </div>
-                    <p>
-                        <small>More coming soon...</small>
-                    </p>
-                </div>
+                <p>
+                    <small>More coming soon...</small>
+                </p>
             </div>
         </div>
+    </div>
     </div>
     <footer>
         &copy; Oliver Daniel 2018. Icons courtesy of

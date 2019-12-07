@@ -1,5 +1,6 @@
 #about-image {
     border: 2px solid white;
+    background: #6D5071;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     width: 100%;
