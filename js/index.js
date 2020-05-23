@@ -9,7 +9,7 @@ const type_delay = 60;
 const blink_delay = 800;
 const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-const COLORS = ['white', '#CD981D', '#00ADE9', '#37CB4D', '#F758FF'];
+const COLORS = ['#EECF6D', '#8A89C0', '#00ADE9', '#37CB4D', '#F758FF'];
 
 const ANCHORS = ['#home', '#about-me', '#skills', '#blog', '#contact'];
 
@@ -84,6 +84,14 @@ function handleResize() {
     }
 }
 
+function setAccent(color){
+    try {
+        document.body.style.setProperty('--accent', color);
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 function addListeners() {
     //resize sensitivity
     window.addEventListener('resize', handleResize);
@@ -114,11 +122,7 @@ function addListeners() {
             index
         }
     }) {
-        try {
-            document.body.style.setProperty('--accent', COLORS[index]);
-        } catch (err) {
-            console.log(err)
-        }
+        setAccent(COLORS[index]);
     });
 
     //skill buttons
@@ -215,6 +219,7 @@ function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
 
 //document ready
 // setAnchors();
+setAccent(COLORS[0]);
 addListeners();
 populateBlog(40, 40);
 feather.replace();

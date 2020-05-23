@@ -5,11 +5,16 @@
     font-family: "Source Code Pro";
     src: url('https://github.com/powerline/fonts/blob/master/Inconsolata/Inconsolata%20for%20Powerline.otf?raw=true') format('otf');
 }
+@font-face {
+    font-family: "Potra";
+    src: url("/fonts/Potra.ttf");
+    src: local("Potra"), url("/fonts/Potra.ttf");
+}
 
 :root {
     --primary-bg: #0F0F0F;
     --primary-window: #191919;
-    --accent: rgb(205, 152, 29);
+    --accent: none;
     --pixel-size: 1px;
     --pixel-width: 40px;
     --pixel-color: #545454;
@@ -20,6 +25,7 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--primary-bg);
     color: white;
     font-family: 'Inconsolata', 'Ubuntu Mono', monospace;
     font-size: 16pt;
@@ -31,7 +37,6 @@ a {
 
 .accent, .skill-icon a.active {
     color: var(--accent);
-    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -60,7 +65,7 @@ a {
 }
 
 .background {
-    background: -webkit-gradient(linear, left top, right top, from(var(--primary-bg)), color-stop(1%, transparent)) center, -webkit-gradient(linear, left top, left bottom, from(var(--primary-bg)), color-stop(1%, transparent)) center, var(--pixel-color);
+    background: var(--primary-bg);
     background: linear-gradient(90deg, var(--primary-bg) calc(var(--pixel-width) - var(--pixel-size)), transparent 1%) center, linear-gradient(var(--primary-bg) calc(var(--pixel-width) - var(--pixel-size)), transparent 1%) center, var(--pixel-color);
     background-size: var(--pixel-width) var(--pixel-width);
 }
@@ -71,7 +76,6 @@ a {
 }
 
 .chevron {
-    -webkit-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -86,7 +90,6 @@ img.logo {
     left: 10px;
     height: 40px;
     opacity: 0.5;
-    -webkit-transition: 0.2s;
     transition: 0.2s;
     -webkit-filter: drop-shadow(2px 4px 1px black);
     filter: drop-shadow(2px 4px 1px black);
@@ -95,7 +98,6 @@ img.logo {
 
 img.logo:hover {
     opacity: 1;
-    -webkit-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -105,31 +107,17 @@ img.logo:hover {
     right: 0;
     width: 80px;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     background: var(--primary-bg);
     border-left: 1px solid var(--accent);
-    -webkit-transition: border-left 0.4s;
     transition: border-left 0.4s;
 }
 
 #sidebar .icon-container {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
     flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -137,7 +125,6 @@ img.logo:hover {
     height: 30px;
     width: 30px;
     color: white;
-    -webkit-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -148,20 +135,13 @@ img.logo:hover {
 }
 
 .shadowed {
-    -webkit-box-shadow: 16px 11px 17px 7px rgba(0, 0, 0, 0.5);
     box-shadow: 16px 11px 17px 7px rgba(0, 0, 0, 0.5);
 }
 
 .page {
     min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -170,31 +150,18 @@ img.logo:hover {
     border-radius: 8px;
     width: 75%;
     min-height: 70vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .window-header {
     padding: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .window-header .button-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 65px;
     margin: 0 10px;
@@ -229,11 +196,7 @@ img.logo:hover {
 .window-header .title {
     margin: auto;
     padding: auto 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -244,52 +207,29 @@ img.logo:hover {
 }
 
 .window-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
     flex: 1;
     width: 100%;
     height: calc(100% - 40px);
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 10px;
 }
 
 .window .content {
-    -webkit-box-flex: 10;
-    -ms-flex: 10;
     flex: 10;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding: 20px 25px;
 }
 
 .window .chevrons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 65px;
     margin-right: 5%;
     height: 50vh;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
     flex: 1;
 }
 
