@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:100,400,700');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400');
+
 @font-face {
     font-family: "Source Code Pro";
     src: url('https://github.com/powerline/fonts/blob/master/Inconsolata/Inconsolata%20for%20Powerline.otf?raw=true') format('otf');
 }
+
 @font-face {
-    font-family: "Potra";
-    src: url("/fonts/Potra.ttf");
-    src: local("Potra"), url("/fonts/Potra.ttf");
+    font-family: "Potra Web";
+    src: local('Potra'),
+        url('../assets/font/potra-webfont.woff2') format('woff2'),
+        url('../assets/font/potra-webfont.woff') format('woff'),
+        url('../assets/font/Potra.ttf') format('ttf');
 }
 
 :root {
@@ -35,33 +39,36 @@ a {
     color: white;
 }
 
-.accent, .skill-icon a.active {
+.accent,
+.skill-icon a.active {
     color: var(--accent);
     transition: color 0.2s;
 }
 
-@-webkit-keyframes blink{
-    from{
+@-webkit-keyframes blink {
+    from {
         color: inherit;
     }
-    to{
+
+    to {
         color: var(--accent);
     }
 }
 
-@keyframes blink{
-    from{
+@keyframes blink {
+    from {
         color: inherit;
     }
-    to{
+
+    to {
         color: var(--accent);
     }
 }
 
 
-.skill-icon.blink{
+.skill-icon.blink {
     -webkit-animation: blink 0.5s ease alternate infinite;
-            animation: blink 0.5s ease alternate infinite;
+    animation: blink 0.5s ease alternate infinite;
 }
 
 .background {
@@ -237,16 +244,20 @@ img.logo:hover {
     #sidebar {
         display: none;
     }
+
     .page+.page {
         margin-bottom: 20%;
     }
+
     .window {
         width: 90%;
     }
+
     .chevrons {
         display: none !important;
     }
-    .button-container{
+
+    .button-container {
         display: none !important;
     }
 }
