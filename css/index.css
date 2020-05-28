@@ -25,7 +25,6 @@
 
 body,
 html {
-    height: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--primary-bg);
@@ -70,7 +69,7 @@ a {
     animation: blink 0.5s ease alternate infinite;
 }
 
-.background {
+.background_ {
     background: var(--primary-bg);
     background: linear-gradient(90deg, var(--primary-bg) calc(var(--pixel-width) - var(--pixel-size)), transparent 1%) center, linear-gradient(var(--primary-bg) calc(var(--pixel-width) - var(--pixel-size)), transparent 1%) center, var(--pixel-color);
     background-size: var(--pixel-width) var(--pixel-width);

@@ -94,18 +94,18 @@ function setAccent(color){
 
 function addListeners() {
     //resize sensitivity
-    window.addEventListener('resize', handleResize);
+    // window.addEventListener('resize', handleResize);
     //parallax
-    if (!USER_AGENT.includes('safari') || USER_AGENT.includes('chrome')) {
-        window.addEventListener('scroll', updateBackground);
+    // if (!USER_AGENT.includes('safari') || USER_AGENT.includes('chrome')) {
+    //     window.addEventListener('scroll', updateBackground);
 
-    } else {
-        const bg = document.querySelector('body');
-        bg
-            .classList
-            .remove('background');
-        bg.style.background = '#0F0F0F';
-    }
+    // } else {
+        // const bg = document.querySelector('body');
+        // bg
+        //     .classList
+        //     .remove('background');
+        // bg.style.background = '#0F0F0F';
+    // }
     //scrollspy
     const menu = document.getElementById('sidebar');
     const chevrons = document.getElementsByClassName('chevron');
