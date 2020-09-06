@@ -7,7 +7,7 @@ function truncate(str, len) {
     for (let i = 0; ret.length <= len - 3; i++) {
         ret += tokens[i] + " ";
     }
-    return ret.trim() + "...";
+    return ret.trim() + "…";
 }
 const postCard = (title, blurb, date, url) => `
 <div class="col-sm-12 col-md-4 col-lg-3">

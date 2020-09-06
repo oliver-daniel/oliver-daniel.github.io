@@ -112,9 +112,9 @@ function addListeners() {
     const SCROLL_SPEED = 4000;
     scrollSpy(menu, SCROLL_SPEED, 'easeInOutSine');
 
-    /* for (let chevron of chevrons) {
+    for (let chevron of chevrons) {
         scrollSpy(chevron, SCROLL_SPEED, 'easeInOutSine');
-    }*/
+    }
 
     //color change
     document.addEventListener('scroll-in', function ({
