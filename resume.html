@@ -254,6 +254,19 @@
                     <h1>Employment &amp; Leadership Experience</h1>
                     <script>
                         document.write([{
+                                organization: "Avion Cargo Polytechnique",
+                                href: "https://avioncargo.polymtl.ca/en",
+                                image: "avion.svg",
+                                position: "Contract Developer",
+                                duration: "June – August 2020",
+                                main_text: "I designed and built a new, fully-bilingual website for Avion Cargo Polytechnique, a student-led competitive aeronautics team at Montréal's leading engineering university. The site is static/SSR React using NextJS, with a Netlify CMS console embedded inside the site itself, using GitHub PR-based deploy webhooks for 100% seamless handoff to content creators. I also handled SEO for the new site.",
+                                extra_info: "In addition to designing a new website, I also assisted in the design of Avion Cargo's rebranding, including the logo you see here.",
+                                extra_styles: {
+                                    "background-color": "#af1111",
+                                    "background-size": "90%"
+                                }
+                            },
+                            {
                                 organization: "Nuance Communications",
                                 href: "https://www.nuance.com/",
                                 image: "nuance.png",
@@ -346,7 +359,7 @@
             <div class="career image" style="background: var(--back-color) url('assets/img/experience/${image}') 50% 50%/contain no-repeat; ${Object.entries(extra_styles).map(([key, val]) => `${key}: ${val}`).join(";")}"></div>
         </a>
     </div>
-    <div class="col-sm-6 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2 col-lg-offset-2">
+    <div class="col-sm-6 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2 col-lg-offset-2 extra-info">
         <p>${extra_info}</p>
     </div>
 </div>

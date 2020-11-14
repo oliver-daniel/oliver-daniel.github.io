@@ -81,7 +81,7 @@ a.button:not(:first-of-type) {
     position: relative;
 }
 
-#pdf-button a{
+#pdf-button a {
     display: table;
     margin: 0 auto;
     margin-bottom: 25px;
@@ -141,31 +141,13 @@ a.button:not(:first-of-type) {
     padding: 5px;
 }
 
-.career.image.iboost {
-    background: url('../assets/img/experience/iboost.png') 50% 50%;
-    background-size: 200%;
+.extra-info {
+    display: flex;
+    align-items: center;
 }
 
-.career.image.tyn {
-    background: url('../assets/img/experience/tyn.png');
-    background-position: 50% 37%;
-    background-size: 250%;
-}
-
-.career.image.diller {
-    background: url('../assets/img/experience/diller.png') 10% 50%;
-    background-size: 215%;
-    /* don't ask me why */
-}
-
-.career.image.jouncer {
-    background: url('../assets/img/experience/jouncer_logo.png') 50% 50%;
-    background-size: cover;
-}
-
-.career.image.uoft {
-    background: url('../assets/img/experience/uoft-logo.png') 50% 50%;
-    background-size: 100%;
+.extra-info p {
+    font-size: 10pt;
 }
 
 #languages [class^="col-"]:nth-child(1) {
@@ -274,6 +256,7 @@ a.button:not(:first-of-type) {
     #experience>.row>[class^='col-']:nth-of-type(3) {
         padding-top: 0;
     }
+
     .career-icon a::before {
         border: none;
     }
