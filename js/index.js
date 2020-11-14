@@ -9,6 +9,7 @@ const type_delay = 60;
 const blink_delay = 800;
 const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+let current_index = -1;
 const COLORS = ['#EECF6D', '#8A89C0', '#00ADE9', '#37CB4D', '#F758FF'];
 
 const ANCHORS = ['#home', '#about-me', '#skills', '#blog', '#contact'];
@@ -63,7 +64,7 @@ async function typeAll() {
 function updateBackground() {
     let bg = document.querySelector('.background');
     const height = window.pageYOffset;
-    const limit = bg.offsetTop + bg.offsetHeight;
+    // const limit = bg.offsetTop + bg.offsetHeight;
     /*if (height > bg.offsetTop && height <= limit) {
         bg.style.backgroundPositionY = ((height - bg.offsetTop) / 2.5 % 40.) + 'px';
     } else {
@@ -84,9 +85,10 @@ function handleResize() {
     }
 }
 
-function setAccent(color){
+function setAccent(index){
+    const color = COLORS[index];
     try {
-        document.body.style.setProperty('--accent', color);
+        document.documentElement.style.setProperty('--accent', color);
     } catch (err) {
         console.log(err)
     }
@@ -107,22 +109,28 @@ function addListeners() {
         // bg.style.background = '#0F0F0F';
     // }
     //scrollspy
-    const menu = document.getElementById('sidebar');
     const chevrons = document.getElementsByClassName('chevron');
-    const SCROLL_SPEED = 4000;
-    scrollSpy(menu, SCROLL_SPEED, 'easeInOutSine');
+    scrollSpy('#sidebar', {
+        sectionSelector: 'div',
+    });
 
     for (let chevron of chevrons) {
-        scrollSpy(chevron, SCROLL_SPEED, 'easeInOutSine');
+        scrollSpy(chevron);
     }
 
     //color change
-    document.addEventListener('scroll-in', function ({
-        detail: {
-            index
+    document.addEventListener('scroll-in', ({detail: {href}}) => {
+        const index = ANCHORS.indexOf(href);
+        const home = document.querySelector('#sidebar [href="#home"]');
+        if (index === current_index){
+            return;
+        } else if (index === 0) {
+            home.classList.add('active');
+        } else {
+            home.classList.remove('active');
         }
-    }) {
-        setAccent(COLORS[index]);
+        current_index = index;
+        setAccent(index);
     });
 
     //skill buttons
@@ -219,7 +227,7 @@ function populateBlog(MAX_TITLE_LENGTH, MAX_BLURB_LENGTH) {
 
 //document ready
 // setAnchors();
-setAccent(COLORS[0]);
+setAccent(0);
 addListeners();
 populateBlog(40, 40);
 feather.replace();
