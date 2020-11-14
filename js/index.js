@@ -124,8 +124,9 @@ function addListeners() {
         const home = document.querySelector('#sidebar [href="#home"]');
         if (index === current_index){
             return;
-        } else if (index === 0) {
+        } else if (index == 0) {
             home.classList.add('active');
+            document.querySelector('#sidebar [href="#about-me"]').classList.remove('active')
         } else {
             home.classList.remove('active');
         }
