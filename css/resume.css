@@ -124,7 +124,8 @@ a.button:not(:first-of-type) {
 .career-icon a::before {
     content: '';
     position: absolute;
-    left: 48%;
+    left: 49%;
+    left: calc(50% - 4px);
     top: 50%;
     height: 115%;
     border-right: 4px solid white;
