@@ -170,7 +170,7 @@ ul {
 }
 
 #main .section:not(:last-child) {
-  margin-bottom: 1.7em;
+  margin-bottom: 1em;
 }
 
 #main .entry {
@@ -186,6 +186,12 @@ ul {
   margin-bottom: 0.4em;
 }
 
+.entry > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 .entry-title {
   font-weight: 700;
   text-transform: uppercase;
@@ -194,13 +200,18 @@ ul {
 
 .entry-date {
   font-size: 9.5pt;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .entry-subtitle {
   font-size: 9pt;
-  font-style: italic;
+  /* font-style: italic; */
   margin-bottom: 0.5em;
+  display: flex;
+  gap: 5px;
 }
+
 
 .entry-subtitle:not(.link) {
   font-weight: 600;
