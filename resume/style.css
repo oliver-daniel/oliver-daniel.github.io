@@ -121,7 +121,8 @@ ul {
   margin: 0 60%;
 }
 
-#contact table, #skills table {
+#contact table,
+#skills table {
   font-size: 11pt;
 }
 
@@ -212,35 +213,34 @@ ul {
   gap: 5px;
 }
 
-
 .entry-subtitle:not(.link) {
   font-weight: 600;
 }
 
 .entry-description {
-  margin: 0.3em 0;
+  margin-top: 0em;
   font-size: 10.5pt;
 }
 
+.entry-subtitle:not(:first-of-type) {
+  margin-top: -0.3em;
+}
+
 #letter {
-    padding: 2.5em;
+  padding: 2.5em;
 }
 
 #letter p + p {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 #letter p:not(:first-child, :last-child) {
-    text-indent: 1em;
+  text-indent: 1em;
 }
 
 @media print {
   html {
     padding: 0;
     margin: 0;
-  }
-  body {
-    /* width: 100%; */
-    /* height: 100%; */
   }
 }
