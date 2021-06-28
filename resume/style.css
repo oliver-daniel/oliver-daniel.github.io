@@ -222,6 +222,10 @@ ul {
   font-size: 10.5pt;
 }
 
+.entry-description + .entry-description {
+  margin-top: .5em;
+}
+
 .entry-subtitle:not(:first-of-type) {
   margin-top: -0.3em;
 }
