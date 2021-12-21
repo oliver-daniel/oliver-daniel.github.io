@@ -14,8 +14,8 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  width: 8.3in;
-  height: 11.7in;
+  width: 8.5in;
+  height: 11in;
   background: var(--main-bg);
   color: var(--main-fg);
   font-family: "Montserrat", sans-serif;
@@ -95,12 +95,12 @@ ul {
 }
 
 #sidebar td:first-child {
-  width: 1.5em;
+  padding-right: .5em;
 }
 
 #sidebar .section-title {
   text-align: left;
-  margin-left: 0.25em;
+  margin-left: .25em;
   margin-bottom: 0.5em;
 }
 
@@ -121,10 +121,10 @@ ul {
   margin: 0 60%;
 }
 
-#contact table,
+/* #contact table,
 #skills table {
   font-size: 11pt;
-}
+} */
 
 #skills table {
   margin-bottom: 5px;
@@ -191,6 +191,7 @@ ul {
   display: flex;
   gap: 5px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .entry-title {
@@ -219,7 +220,8 @@ ul {
 
 .entry-description {
   margin-top: 0em;
-  font-size: 10.5pt;
+  padding-left: 1.2em;
+  font-size: 10.4pt;
 }
 
 .entry-description + .entry-description {
@@ -230,21 +232,19 @@ ul {
   margin-top: -0.3em;
 }
 
-#letter {
-  padding: 2.5em;
-}
-
-#letter p + p {
-  margin-top: 1em;
-}
-
-#letter p:not(:first-child, :last-child) {
-  text-indent: 1em;
-}
-
 @media print {
   html {
     padding: 0;
     margin: 0;
   }
 }
+
+/* from colin's class*/
+/* .icon, i {
+  display: none !important;
+  width: 0 !important;
+}
+
+td {
+  width: 0 !important;
+} */
