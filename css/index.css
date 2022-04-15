@@ -35,13 +35,13 @@ html {
     scroll-snap-type: y proximity;
 }
 
-a {
-    color: white;
+a, a:visited {
+    color: inherit;
 }
 
 .accent,
 .skill-icon a.active {
-    color: var(--accent);
+    color: var(--accent) !important;
     transition: color 0.2s;
 }
 

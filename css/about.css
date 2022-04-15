@@ -11,10 +11,6 @@
     max-width: 300px;
 }
 
-#about-me p {
-    padding: 0 20px;
-}
-
 #about-image:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);

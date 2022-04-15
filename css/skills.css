@@ -36,6 +36,7 @@
     -webkit-transition: 0.4s;
     transition: 0.4s;
     font-size: 14pt;
+    cursor: pointer;
 }
 
 .skill-icon.active,

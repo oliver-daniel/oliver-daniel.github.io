@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INF 353 Design Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="logo">
+        <a href="/"><img src="/assets/svg/logo.svg" alt=""></a>
+    </nav>
+    <section id="jumbotron">
+        <div class="row middle-xs">
+            <div class="col-xs-12 col-md-3 center-xs">
+                <img src="assets/img/Galaxy Note 20 Ultra.png" alt="">
+            </div>
+            <div class="col-xs col-md-6 col-md-offset-1">
+                <h1>Vaccine Ontario</h1>
+                <h2 class="subheader">A suite of applications helping Ontarians manage their COVID-19 vaccinations.</h2>
+                <p>The early days of the pandemic in Ontario were filled with confusion and frustration, as residents
+                    struggled
+                    to find vaccination sites and book appointments to receive their first dose.
+                    Even later on, the process of acquiring and presenting proof of vaccination remained unintuitive and
+                    difficult,
+                    until the practice was dropped altogether.
+                </p>
+                <p>Could using Human-Centred Design have provided a better way?</p>
+                <p class="disclaimer">
+                    Created for course project. Not developed by or associated with the Government of Ontario.
+                    Any similarity to Government of Ontario digital assets is for simulation purposes only.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About the project</h2>
+        <div class="row top-xs">
+            <nav class="col-xs-12 col-md-2" id="toc">
+                <ul>
+                    <li><a href="#about">About the project</a></li>
+                    <li><a href="#persona">Who is this for?</a></li>
+                    <li><a href="#prototyping">Prototyping</a></li>
+                    <li><a href="#finished-product">The finished product</a></li>
+                    <li><a href="#jumbotron">Back to top</a></li>
+                </ul>
+            </nav>
+            <div class="col-xs-6 col-xs-last col-md-2">
+                <img src="assets/img/watch1.png" alt="">
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div>
+                    <h3>Summary</h3>
+                    I ideated and designed a pair of high-quality prototypes, one
+                    for smartphone and one for smartwatch, to help Ontarians book and manage appointments for COVID-19
+                    vaccines.<br><br>Features include on-the-go reminders for upcoming appointments, and an easy way to
+                    view and present vaccination history.
+                </div>
+                <div>
+                    <h3>Sector</h3>
+                    Government and public health
+                </div>
+                <div>
+                    <h3>Platforms</h3>
+                    <ul>
+                        <li>Android mobile</li>
+                        <li>Wear OS for smartwatch</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs">
+                <div>
+                    <h3>My role</h3>
+                    <ul>
+                        <li>Created user persona profile</li>
+                        <li>Prototyped low- and high-fidelity designs</li>
+                        <li>Conducted usability testing</li>
+                        <li>Designed animations and view transitions</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Tools used</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Google Drive</li>
+                        <li>Kanban task management</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Skills learned</h3>
+                    <ul>
+                        <li>Human-Centred Design for wearables and small screens</li>
+                        <li>End-to-end interaction flow design</li>
+                        <li>Creating reusable and composable Figma components</li>
+                        <li>Styleguide document creation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-6 col-xs-last col-md-2">
+                <img src="assets/img/watch2.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="persona">
+        <h2>Who is this for?</h2>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <p>A user persona is a crucial element of Human-Centred Design: by envisioning who you're designing for,
+                    you gain a more holistic understanding of what features are more or less essential to helping your
+                    users achieve their goals.</p>
+                <p>This exercise led to a surprising lesson: <em>design is time-sensitive.</em> March 2022 saw the end
+                    of many pandemic-related restrictions of Ontario, which forced me to examine how an application to
+                    help Ontarians receive and prove vaccinations could still be helpful.</p>
+            </div>
+            <div class="col-xs-6 col-md-2 col-md-offset-1">
+                <img src="assets/img/omar.png" title="Courtesy of Unsplash">
+            </div>
+            <div class="col-xs col-md-3" style="margin-left: 2em;">
+                <h3>On-the-Go Omar</h3>
+                <ul>
+                    <li>26 years old</li>
+                    <li>Lives alone in a downtown Toronto studio apartment</li>
+                    <li>Heavily reliant on technology to remind him of different responsibilities</li>
+                    <li>Wants to protect himself and others from COVID, but can't take too much time away from work</li>
+                    <li>Reliant on public transit to get around: uses commute time to organize upcoming tasks</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>From this, I determined that Omar needs:</p>
+            <div class="col-xs-10 col-xs-offset-1 center-xs" style="text-align: left;">
+                <ol style="font-size: 1.5em; margin-top: 2em;">
+                    <li>A way to book vaccine appointments at accessible locations.</li>
+                    <li>A way to monitor his appointments so he doesn't double-book himself.</li>
+                    <li>To get consistent reminders about his upcoming appointments.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section id="prototyping">
+        <div class="row mobile center-xs">
+            <div class="img-cover"><img src="assets/img/mobile-low-fi/Splash.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/mobile-low-fi/CancellingModal.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/mobile-low-fi/CardEntryForm.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/mobile-low-fi/ConfirmDetails.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/mobile-low-fi/DateTimeSelect (prefilled).png" alt=""></div>
+        </div>
+        <div class="row center-xs">
+            <h2>prototyping</h2>
+        </div>
+        <div class="row watch center-xs">
+            <div class="img-cover"><img src="assets/img/watch-low-fi/Splash.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/watch-low-fi/Home.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/watch-low-fi/List.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/watch-low-fi/Pending.png" alt=""></div>
+            <div class="img-cover"><img src="assets/img/watch-low-fi/Confirmation.png" alt=""></div>
+        </div>
+        <div style="margin-top: 4em;"></div>
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <p>I've always struggled to draw on paper, especially when precision is an asset. For low-fidelity
+                    prototyping of screens for both platforms, I used a stylus to draw directly in Figma using the
+                    Pencil tool. This allowed me to combine the flexibility and speed of hand-drawing with the
+                    convenience of undo, redo, and copying shared components.</p>
+                <p>Although I had some previous experience designing for Android mobile phones, smartwatches were a
+                    completely new realm. I relied heavily on official Wear OS style guides to determine what components
+                    were available to me.</p>
+            </div>
+        </div>
+    </section>
+    <section id="finished-product">
+        <div class="row between-xs middle-xs">
+            <div class="col-xs-12 col-md-4">
+                <img src="assets/img/mobile-proto.png" alt="" style="margin: 0 auto;">
+            </div>
+            <div class="col-xs-12 col-md center-xs">
+                <h2>the finished product</h2>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <img src="assets/img/watch-proto.png" alt="">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 2em;">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <p>
+                    Seven workflows, dozens of component states, and weeks of hard work later, I created a working
+                    prototype that I'm proud to present. Both applications come with their own style guide, which was
+                    adapted by intertwining different flavours of Material Design with the official Government of
+                    Ontario style manual for web and mobile.
+                </p>
+                <p>Try them below! To view in fullscreen, click on a prototype and press F.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FFXMYQDBe6L6f8VJi3SFOq7%2FAssignment-2%3Fnode-id%3D62%253A7255%26scaling%3Dscale-down%26page-id%3D62%253A2450%26starting-point-node-id%3D62%253A7177%26hide-ui%3D1"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FFXMYQDBe6L6f8VJi3SFOq7%2FAssignment-2%3Fnode-id%3D44%253A33778%26scaling%3Dcontain%26page-id%3D1%253A3%26starting-point-node-id%3D44%253A33778%26show-proto-sidebar%3D0%26hide-ui%3D1"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- <ul>
+        <li><span>Your role:</span>
+            <ul>
+                <li>Designed low- and high-fidelity prototypes for a duet of applications, assisting Ontarians manage their COVID-19 vaccine appointments and vaccination history.</li>
+                <li>Adapted Government of Ontario design language and resources for touchscreen devices.</li>
+                <li>Manufactured design docket including user persona, design pitch, and full design specifications for both applications.</li>
+            </ul>
+        </li>
+        <li><span>Platform:</span>
+            <ul>
+                <li>Android OS (smartphone)</li>
+                <li>Wear OS (smartwatch)</li>
+            </ul>
+        </li>
+        <li><span>Sector:</span>
+            <span>Government – Public Health</span>
+        </li>
+        <li><span>Methodologies:</span>
+            <ul>
+                <li>Human-Centred Design (HCD)</li>
+                <li>Sequential storyboarding (??)</li>
+            </ul>
+        </li>
+        <li><span>Tools used:</span>
+            <ul>
+                <li>Figma</li>
+                <li>Touchscreen + stylus for drawing</li>
+                <li>Google Docs for typesetting deliverables</li>
+            </ul>
+        </li>
+        <li><span>Skills developed:</span>
+            <ul>
+                <li>Design for wearables and small screens</li>
+                <li>Figma: <ul>
+                    <li>Interaction flow design</li>
+                    <li>Reusability and composability of components</li>
+                    <li>Smart animations and route transitions</li>
+                </ul></li>
+            </ul>
+        </li>
+        <li><span>Artifacts:</span>
+            <span></span>
+        </li>
+        <li><span>Lessons learned:</span>
+            <ul>
+                <li>Design is time-sensitive: the assignment was released after the Government of Ontario had lifted most vaccine mandates, which made creating a user persona more difficult – who wants a vaccine but still hasn't gotten one? Would having a mobile/smartwatch application really make that process more convenient?</li>
+                <li>Working on major UX projects alone has benefits and drawbacks. You have full control over the project and your mental image is the single source of truth, but you have to do <em>everything</em> yourself: there's no delegation, and no second opinions from someone equally informed on the confines of the project.</li>
+                <li>Limitations on tools are limitations on possibilities. Figma doesn't currently have very robust systems for handling interactions, in particular reactive design. There's no way to set variables, etc. using just prototyping features, so every possible state has to either be accounted for or forced away ('happy path'). Similarly, including even simple animations proved to be a pain; the best solution ended up being to *produce a GIF* of the desired animation, and include it as an image in the prototype. Including these workarounds was a *major* point of friction, especially when working alone.</li>
+                <li>Despite having purchased a touchscreen-enabled laptop over the pandemic, this was my first time using that feature for creative work.Figma's Pencil tool is simple, but robust enough for drawing low-fidelity prototypes with a stylus, especially with a keyboard close at hand to enter shortcuts and the like. (Working on my stylus handwriting is a future goal.)</li>
+            </ul>
+        </li>
+    </ul> -->
+    <div id="overlay">
+        <div class="overlay-container">
+            <img />
+            <p class="disclaimer">
+        </div>
+    </div>
+</body>
+<script>
+    const html = document.querySelector('html');
+    const overlay = document.getElementById('overlay');
+    const scrollbarWidth = "-" + (window.innerWidth - document.documentElement.clientWidth || 15) + "px";
+
+    const handleImageClick = ev => {
+        const { src, title } = ev.target;
+
+        // set overlay
+        overlay.style.display = "flex";
+        html.style.overflowY = "hidden";
+        html.style.marginLeft = scrollbarWidth;
+
+        const contents = overlay.childNodes[1];
+
+        contents.childNodes[1].src = src;
+        contents.childNodes[2].textContent = title;
+    }
+
+    overlay.addEventListener('click', ev => {
+        overlay.style.display = "none";
+        html.style.overflowY = "inherit";
+        html.style.marginLeft = 0;
+    })
+
+    document.querySelectorAll('img').forEach(node => {
+        node.addEventListener('click', handleImageClick)
+    })
+
+    document.querySelector("#logo img").removeEventListener('click', handleImageClick);
+</script>
+
+</html>
