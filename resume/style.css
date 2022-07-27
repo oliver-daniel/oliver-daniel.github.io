@@ -88,8 +88,10 @@ ul ul {
 
 #content {
   padding: 1em;
+  margin-top: -1em;
   display: flex;
-  flex-direction: row;
+  height: 100%;
+  align-items: center;
 }
 
 #sidebar {
@@ -196,8 +198,8 @@ ul ul {
     justify-content: center; */
 }
 
-#main .section:not(:last-child) {
-  margin-bottom: 1.5em;
+#main .section ~ .section {
+  margin-top: 2em;
 }
 
 #main .entry {
@@ -252,8 +254,12 @@ ul ul {
 }
 
 .entry-description + .entry-description,
-.entry-description > li + li{
+.entry-description li + li{
   margin-top: .25em;
+}
+
+ul.entry-description > ul {
+  margin-top: .5em;
 }
 
 .entry-subtitle:not(:first-of-type) {
